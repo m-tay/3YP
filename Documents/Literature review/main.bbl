@@ -1,0 +1,18 @@
+\begin{thebibliography}{}
+
+\bibitem[Hendrikx et~al., 2013]{Hendrikx:2013:PCG:2422956.2422957}
+Hendrikx, M., Meijer, S., Van Der~Velden, J., and Iosup, A. (2013).
+\newblock Procedural content generation for games: A survey.
+\newblock {\em ACM Trans. Multimedia Comput. Commun. Appl.}, 9(1):1:1--1:22.
+
+\bibitem[Perlin, 1985]{Perlin:1985:IS:325165.325247}
+Perlin, K. (1985).
+\newblock An image synthesizer.
+\newblock {\em SIGGRAPH Comput. Graph.}, 19(3):287--296.
+
+\bibitem[Spufford, 2003]{spufford_2003}
+Spufford, F. (2003).
+\newblock {\em Backroom Boys: The Secret Return of the British Boffin}.
+\newblock Faber and Faber.
+
+\end{thebibliography}

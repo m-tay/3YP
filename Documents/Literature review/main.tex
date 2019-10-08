@@ -1,0 +1,65 @@
+\documentclass[review]{cmpreport}
+\usepackage{natbib}
+
+
+\title{Third Year Project: Literature Review}
+\author{Matthew Taylor}
+\registration{100151729}
+\supervisor{Dr Rudy Lapeer}
+\ccode{CMP-6013Y}
+
+\begin{document}
+
+\maketitle
+
+\begin{section}{Introduction}
+
+\subsection{Aim of the project}
+The project aims to implement a first person shooter game which uses procedural generation to provide a novel and interesting gaming experience. There any a lot of ways procedural content generation (PCG) can be applied to games, so this literature review will explore the broad themes of the field to find specific areas to focus on.
+
+\subsection{Areas of knowledge required}
+There are many PCG techniques, which have been developed and used in video games since the 1970s. I will need to gain a strong understanding of this field in order to find interesting areas to focus on. \par
+I will also need to learn the Unity platform, in order to implement my ideas. 
+
+\subsection{Report structure}
+The report will provide a summary of the PCG field, identifying key themes and the current state of the field, including interesting "unsolved problems" or under-explored areas. \par
+I will then focus on a few promising areas to explore the literature in detail, with a view to informing my project's aim and objectives.
+
+\end{section}
+
+\begin{section}{Key themes}
+\subsection{Types of Procedural Content Generation}
+There are two main types of procedural content generation, which use similar methods but achieve different goals. They are \textbf{endless content generation} and \textbf{efficient content storage}.
+
+\subsubsection{Efficient content storage}
+Prevalent in the early days of PCG, efficient content storage exploits procedural content generation to create large amounts of data without needing to store it - it can simply be re-generated using a deterministic algorithm every time it is required. An example of this is the 1984 game \textit{Elite}, as documented in \citet{spufford_2003}. Here, the game developers discuss using a pseudorandom number generator with pre-defined seeds to generate large amounts of content, without needing to store any of the content itself. \par
+A similar technique is adopted for image generation, as per \cite{Perlin:1985:IS:325165.325247}. Perlin describes using well-defined stochasic functions that can be parametised to produce realistic textures procedurally. This means that textures can be generated when required or when a program is initialised, rather than needing to store them. \par
+A lot has changed in computers since the 80s - memory and storage constraints are now much less of an issue, so using PCG to efficiently store large amounts of content has been used less.
+
+\subsubsection{Endless content generation}
+As storage constraints have been eclipsed by the rapid development of technology, the generation of content has become more of a concern. Increasing sophistication of games and the expectations of players mean content creation is more time-consuming and costly. This has resulted in an increase in the use of PCG to generate content. \par
+This has become a wide field, resulting in the creation of a taxonomy of PCG in \cite{Hendrikx:2013:PCG:2422956.2422957}. It describes six layers of PCG in games:
+\begin{enumerate}
+    \item Game bits (eg. textures, buildings)
+    \item Game space (eg. maps, lakes)
+    \item Game systems (eg. roads)
+    \item Game scenarios (eg. puzzles, stories)
+    \item Game design (eg. rules)
+    \item Derived content (eg. leaderboards)
+\end{enumerate}
+
+
+
+\end{section}
+
+
+
+
+
+\begin{section}{Evaluation and analysis}
+\end{section}
+
+
+\bibliography{sources}
+
+\end{document}
