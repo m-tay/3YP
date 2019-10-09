@@ -25,6 +25,12 @@ Perlin, K. (1985).
 \newblock An image synthesizer.
 \newblock {\em SIGGRAPH Comput. Graph.}, 19(3):287--296.
 
+\bibitem[Shaker et~al., 2016]{shaker2016procedural}
+Shaker, N., Togelius, J., and Nelson, M.~J. (2016).
+\newblock {\em Procedural Content Generation in Games: A Textbook and an
+  Overview of Current Research}.
+\newblock Springer.
+
 \bibitem[Spufford, 2003]{spufford_2003}
 Spufford, F. (2003).
 \newblock {\em Backroom Boys: The Secret Return of the British Boffin}.
