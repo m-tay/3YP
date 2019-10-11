@@ -16,19 +16,20 @@
 \begin{section}{Introduction}
 
 \subsection{Aim of the project}
-The project aims to implement a first person shooter game which uses procedural generation to provide a novel and interesting gaming experience. There any a lot of ways procedural content generation (PCG) can be applied to games, so this literature review will explore the broad themes of the field to find specific areas to focus on.
+The project aims to implement a first person shooter game which uses procedural generation to provide a novel and interesting gaming experience. There are many ways procedural content generation (PCG) can be applied to games, so this literature review will explore the broad themes of the field to find specific areas to focus on.
 
 \subsection{Areas of knowledge required}
-There are many PCG techniques, which have been developed and used in video games since the 1970s. I will need to gain a strong understanding of this field in order to find interesting areas to focus on. \par
-I will also need to learn the Unity platform, in order to implement my ideas. 
+PCG techniques have been developed and used in video games since the 1970s. I will need to gain a strong understanding of this field in order to find interesting areas to focus on.\par
+In order to implement the concepts and techniques I will focus on, I will need to learn how to use the Unity platform.
 
 \subsection{Report structure}
 The report will provide a summary of the PCG field, identifying key themes and the current state of the field, including interesting "unsolved problems" or under-explored areas. \par
-I will then focus on a few promising areas to explore the literature in detail, with a view to informing my project's aim and objectives.
+I will then focus on a few promising areas to explore the literature in detail, with a view to informing my project's aim and objectives. \par
+This report will critically analyse sources as they are referenced. This will inform my conclusions and amendments to my project's aim and objectives, which I will present at the end of the report.
 
 \end{section}
 
-\begin{section}{Key themes}
+\begin{section}{Overview of Procedural Content Generation}
 \subsection{Types of Procedural Content Generation}
 There are two main types of procedural content generation, which use similar methods but achieve different goals. They are \textbf{endless content generation} and \textbf{efficient content storage}.
 
@@ -50,7 +51,10 @@ This has become a wide field, resulting in the creation of a taxonomy of PCG in 
 \end{enumerate}
 
 This paper is relatively recent (2013) which makes the summary it provides still accurate to this day. It is cited (36 times on acm.org) by others in the industry. I have done some comparison against http://pcg.wikidot.com/ which maintains a list of games using PCG, which confirms there have been no large advances or practical examples of PCG in games since this was published. This gives me confidence that the taxonomy and techniques discussed are still accurate and relevant today. \par 
-In chapter 6 of \cite{Hendrikx:2013:PCG:2422956.2422957}, the paper discusses "recommendations for future research". One of the recommendations details the generation of realistic indoor game spaces. I will explore this field and the literature surrounding it in more detail. 
+
+\subsection{Areas of PCG to focus on}
+In chapter 6 of \cite{Hendrikx:2013:PCG:2422956.2422957}, the paper discusses "recommendations for future research". One of the recommendations details the generation of realistic indoor game spaces. It is also clear from the literature overview that many of the applications of PCG happen before game play begins, so I will be interested to explore the applications of real-time PCG. \par
+In the following section, I will narrow my focus to the area of generating indoor spaces, in terms of both layouts and decoration, especially in real-time.
 
 \end{section}
 
@@ -83,6 +87,10 @@ These methods are well suited to producing feasible indoor spaces required in ga
 The paper is reasonably well cited (22 citations on acm.org) and was published in 2010. The techniques it describes are certainly not dated and could concievably be used to generate content in games today. \par  
 The ideas presented are intriguing, as they specifically reference the type of game I aim to create - a 3D action-adventure style game. The use of GGs will enable sequences of rooms to be generated in which the order matters (for instance, in a maze, a beginning must be connected to a goal position). In this way, it will also be possible to procedurally generate unpredictable layouts that are nevertheless perfectly valid, in an efficient manner.
 
+\subsection{Graph based approaches}
+\cite{van2013designing} extends the approach of using generative grammars. They recognise that previous work, especially \cite{sbpcg}, does not focus much on gameplay-based control over the procedural generation. They seek to demonstrate that by using grammars to define constraints, then using graphs to generate constrained content allows a designer to have a hand on the content generated. This is especially useful in the context of games, because it allows generated content to be directed towards something. When things like "realism" and "not looking too computer generated" are considered, this is an interesting concept. \par
+Another interesting point they raise is methods of testing the generated content. They use histograms to measure complexity and "danger", which allows them to adjust the constraints to achieve the desired results. They also use histograms to measure the generation speed, which is something I will be focussing on. This is a useful technique and something I will aim to emulate against my own ideas. \par
+This paper is more recent than some of the others I have reviewed and cites some of the earlier papers. They specifically address some shortcomings in those papers. This gives me confidence in the areas of the other papers that did not identify as being weak, while also providing useful insight into more modern techniques in PCG. 
 
 \end{section}
 
