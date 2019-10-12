@@ -35,7 +35,7 @@ There are two main types of procedural content generation, which use similar met
 
 \subsubsection{Efficient content storage}
 Prevalent in the early days of PCG, efficient content storage exploits procedural content generation to create large amounts of data without needing to store it - it can simply be re-generated using a deterministic algorithm every time it is required. An example of this is the 1984 game \textit{Elite}, as documented in \citet{spufford_2003}. Here, the game developers discuss using a pseudorandom number generator with pre-defined seeds to generate large amounts of content, without needing to store any of the content itself. \par
-A similar technique is adopted for image generation, as per \cite{Perlin:1985:IS:325165.325247}. Perlin describes using well-defined stochasic functions that can be parametised to produce realistic textures procedurally. This means that textures can be generated when required or when a program is initialised, rather than needing to store them. \par
+A similar technique is adopted for image generation, as per \cite{Perlin:1985:IS:325165.325247}. Perlin describes using well-defined stochasic functions that can be parametised to produce realistic textures procedurally. This means that textures can be generated when required or when a program is initialised, rather than needing to store them. Perlin's paper is widely cited and had a large impact on the field, despite it's relative age.\par
 A lot has changed in computers since the 80s - memory and storage constraints are now much less of an issue, so using PCG to efficiently store large amounts of content has been used less.
 
 \subsubsection{Endless content generation}
