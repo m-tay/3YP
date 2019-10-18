@@ -10,6 +10,11 @@ Dormans, J. (2010).
   adventure games.
 \newblock pages 1:1--1:8.
 
+\bibitem[Ebert and Musgrave, 2003]{ebert2003texturing}
+Ebert, D.~S. and Musgrave, F.~K. (2003).
+\newblock {\em Texturing \& modeling: a procedural approach}.
+\newblock Morgan Kaufmann.
+
 \bibitem[Germer and Schwarz, 2009]{doi:10.1111/j.1467-8659.2009.01351.x}
 Germer, T. and Schwarz, M. (2009).
 \newblock Procedural arrangement of furniture for real-time walkthroughs.
@@ -30,6 +35,10 @@ Shaker, N., Togelius, J., and Nelson, M.~J. (2016).
 \newblock {\em Procedural Content Generation in Games: A Textbook and an
   Overview of Current Research}.
 \newblock Springer.
+
+\bibitem[Speedtree, 2015]{speedtree}
+Speedtree (2015).
+\newblock Speedtree awards (speedtree.com).
 
 \bibitem[Spufford, 2003]{spufford_2003}
 Spufford, F. (2003).
