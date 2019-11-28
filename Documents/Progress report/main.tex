@@ -1,0 +1,136 @@
+\documentclass[progress]{cmpreport}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{paralist}
+\usepackage{outlines}
+\graphicspath{ {./} }
+
+\title{Third Year Project: Progress Report}
+\author{Matthew Taylor}
+\registration{100151729}
+\supervisor{Dr Rudy Lapeer}
+\ccode{CMP-6013Y}
+
+\begin{document}
+
+\maketitle
+
+\begin{section}{Introduction}
+
+\subsection{Aim of the project}
+The project aims to implement a first person video game which uses procedural generation (PCG) to provide a novel and interesting game experience. The project will explore the technical aspects of using PCG as a core feature of a game, specifically, implementation and performance. 
+
+It will focus on real-time procedural level generation and providing a compelling, dynamic level structure.
+
+\subsection{Motivation}
+Procedural generation is not a new field, especially in video games, but there are interesting areas that are seldom explored.
+
+The motivation behind the project's aims are to explore new and interesting concepts, namely, using PCG as a core feature in a game and using real-time procedural generation to provide an interesting experience.
+   
+\end{section}
+
+\begin{section}{Issues and problems}
+
+\subsection{Designing 3D games}
+Designing 3D games and the assets required to populate the levels created could take a long time, especially if much of the functionality is created from scratch. To enable the project's aims to be achieved in a realistic timeframe, the Unity game engine was chosen. This tool enables relatively rapid production 3D game enviroments, supporting the design of assets and enabling quick prototyping of ideas. Unity supports the use of C\# as a scripting language to program game features in. It also provided a lot of documentation, which was useful in learning the framework and the systems it provides. Much of the initial stages of the project focussed on learning Unity.
+
+\subsection{Performance}
+How a game performs is critical to it's success, even at a basic level. If the game cannot be played in a sustainable framerate on common hardware, it could be considered a techncial failure. The prototype stage considered performance at every aspect.
+
+\subsection{Evaluation of success}
+A key issue with a project of this type is how success is evaluated. There are a few obvious candidates, which I will list, along with some more subtle intepretations of the projects success.
+
+\subsubsection{Performance}
+As alluded to previously, performance is one of the key components of the projects success. Performance will be measured in a few ways:
+\begin{itemize}
+    \item{Frame rate}
+    \item{Initial loading time}
+    \item{Smooth level re-generation (no jitter when level changes behind player)}
+\end{itemize}
+
+\subsubsection{Convincing levels}
+The levels must appear convincing. This is difficult to quantify, but nevertheless is an important attribute. The levels (at least in the initial design) will be mazes generated in a grid, with the grid sections subdivided in different ways.
+
+This could easily create a boring level, where the grid pattern is discernable and the rooms are boring and procedural to traverse. Successful generation of levels will avoid these issues.
+
+\end{section}
+
+\begin{section}{Design and planning}
+
+\subsection{Implementation, testing and evaluation plan}
+The project development operates under an Agile methology. Agile does not require that all requirements (or "user stories") are defined up front, instead it is encouraged that they are developed and refined during the lifecycle of the project.
+
+The project itself is divided into Agile "sprints". It was decided to deliver a sprint every two weeks, as this fit with the development time given to the project and providing updates to the project supervisor.
+
+While all the stories were not required at the outset, as part of the planning, it was decided to plot rough timescales against Agile "epics". These epics provide a high-level view of functionality and are defined as:
+
+\begin{outline}
+    \1 Build base first person 3D features
+        \2 Provides a basic level design
+        \2 Proves the concepts of vision and movement
+    \1 Prototype level generation
+        \2 Prove a method of generating a guaranteed path through a maze
+        \2 Prove a method of filling in non-guaranteed paths through the maze
+    \1 Prototype room generation
+        \2 Prove a method of generating room interiors
+        \2 Room generaion must not interfere with guaranteed path through maze
+    \1 Prototype level re-generation
+        \2 Design method to procedurally re-generate sections of the level as the player moves trhough it
+    \1 Add gameplay elements
+        \2 Decide on how a level is finished by the player
+        \2 Provide some interest and threat while navigating the level
+        \2 Provide means of assisting in navigation (not just blinding searching for the goal
+    \1 Implement final designs for level generation
+        \2 Include use of non-prototype textures
+        \2 Ensure performance meets goals 
+\end{outline}
+
+- Gantt chart and progress against it
+
+\subsection{Requirements and prioritisation}
+
+\subsection{Design}
+\subsubsection{Guaranteed path generation}
+The first part of the design to be implemented required a guaranteed path through a maze to be generated. This was achieved by using a random walk - a stochastic process implmented in two dimensions to provide a definite route through the maze.
+
+The random walk is implemented using an agent based approach. The agent can choose from three random  directions to travel in - left, right or down. The probability of these directions being chosen are as follows:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ |c|c|c| }
+    \hline
+    Left & Right & Down \\ 
+    \hline
+    40\% & 40\% & 20\%\\ 
+    \hline
+    \end{tabular}
+    \caption{A table showing probability of direction random walk agent will take}
+    \end{table}
+
+This skewed probability distribution encourages the path generating agent to meander left and right more than moving down, generating a path that is longer and doubles back on itself more.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+    \includegraphics[width=6cm]{img/1-maze.png}
+    \caption{A top-down view of the guaranteed path generation}
+    \label{fig:wrapfig}
+    \end{wrapfigure}
+\end{section}
+
+When the agent has chosen a valid direction, it randomly selects a valid tile. To aid in creating an interesting maze, the agent can choose from a variety of pre-made tiles with varying exits. For example, it may choose to generate a room with only left and right openings, or a tile with openings on the left, right and down-facing aspects. 
+
+The agent has methods of checking where it has been and where it is going next, so that it picks valid tiles that have openings in the directions it has come from and intends to go.
+
+The agent is given bounds and restrictions while it is performing the random walk. These bounds ensure the generation does not stray too far left or right. When the agent reaches the lowest down-bound, it stops generating the level and spawns the level's goal in the final tile it generated.
+
+These bounds are adjusted by parameters, which aid in development and testing and can be adjusted based on performance or desired level size.
+
+
+
+\begin{section}{Evaluation of progress}
+- Changes to aims/scope/work plan
+\end{section}
+
+\bibliography{sources}
+
+\end{document}
