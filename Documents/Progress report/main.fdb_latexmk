@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1574635204 "main.aux" "main.bbl" "main" 1574635415
+["bibtex main"] 1574974436 "main.aux" "main.bbl" "main" 1574974447
   "C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/apalike.bst" 1291972791 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "main.aux" 1574635211 5056 312a8a68d6b6dd82c922ddcc77a8997c "pdflatex"
+  "main.aux" 1574974446 6322 cfc23f49e4f3b96fbe3ef4c63945a7ae "pdflatex"
   "sources.bib" 1571407690 5731 fb00e1c30ebb7df6ecc104e6dd68a8f3 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1574635205 "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.tex" "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.pdf" "main" 1574635415
+["pdflatex"] 1574974437 "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.tex" "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.pdf" "main" 1574974447
   "C:/Users/Matt/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1570018471 4244661 c0415c56d0cdb9b87145af60c4d2c10d ""
   "C:/Users/Matt/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1574634724 80453 73224248f0a73acd005b5611945eaaa6 ""
   "C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -205,19 +205,20 @@
   "C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463131981 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.aux" 1574635211 5056 312a8a68d6b6dd82c922ddcc77a8997c ""
-  "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.tex" 1574635413 7578 88942ee4cea66802f6338397b52f9510 ""
+  "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.aux" 1574974446 6322 cfc23f49e4f3b96fbe3ef4c63945a7ae ""
+  "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.tex" 1574974424 8822 95fea692a62c13ef75ba2b0b94d3b9e4 ""
   "cmpreport.cls" 1574277044 16655 2f5362976a2990553f6a6497eb0e58df ""
   "img/1-maze.png" 1574634529 50099 00d386eb9c209737ab018acf9d92324f ""
-  "main.aux" 1574635211 5056 312a8a68d6b6dd82c922ddcc77a8997c "pdflatex"
-  "main.bbl" 1574635204 52 0eba253fc001332e731e8aba3f23127b "bibtex main"
-  "main.out" 1574635210 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1574635413 7578 88942ee4cea66802f6338397b52f9510 ""
+  "img/gantt-original.png" 1574972659 70437 51ddd73c7f6d0643b9f674a2a23157db ""
+  "main.aux" 1574974446 6322 cfc23f49e4f3b96fbe3ef4c63945a7ae "pdflatex"
+  "main.bbl" 1574974437 52 0eba253fc001332e731e8aba3f23127b "bibtex main"
+  "main.out" 1574974446 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1574974424 8822 95fea692a62c13ef75ba2b0b94d3b9e4 ""
   "marksheetprogress.tex" 1574277044 1203 a4355b91f15c9109bebef4f6f48dda94 ""
   (generated)
-  "main.aux"
-  "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.log"
   "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.pdf"
   "main.out"
   "main.pdf"
+  "c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.log"
   "main.log"
+  "main.aux"

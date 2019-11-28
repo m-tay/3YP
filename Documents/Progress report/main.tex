@@ -4,6 +4,8 @@
 \usepackage{wrapfig}
 \usepackage{paralist}
 \usepackage{outlines}
+\usepackage{booktabs}
+\usepackage{appendix}
 \graphicspath{ {./} }
 
 \title{Third Year Project: Progress Report}
@@ -58,35 +60,21 @@ This could easily create a boring level, where the grid pattern is discernable a
 
 \begin{section}{Design and planning}
 
-\subsection{Implementation, testing and evaluation plan}
+\subsection{Implementation methodology}
 The project development operates under an Agile methology. Agile does not require that all requirements (or "user stories") are defined up front, instead it is encouraged that they are developed and refined during the lifecycle of the project.
 
 The project itself is divided into Agile "sprints". It was decided to deliver a sprint every two weeks, as this fit with the development time given to the project and providing updates to the project supervisor.
 
-While all the stories were not required at the outset, as part of the planning, it was decided to plot rough timescales against Agile "epics". These epics provide a high-level view of functionality and are defined as:
+While all the stories were not required at the outset, as part of the planning, it was decided to plot rough timescales against Agile "epics". These epics provide a high-level view of functionality and are detailed in Table \ref{tab:epics} on page \pageref{tab:epics}.
 
-\begin{outline}
-    \1 Build base first person 3D features
-        \2 Provides a basic level design
-        \2 Proves the concepts of vision and movement
-    \1 Prototype level generation
-        \2 Prove a method of generating a guaranteed path through a maze
-        \2 Prove a method of filling in non-guaranteed paths through the maze
-    \1 Prototype room generation
-        \2 Prove a method of generating room interiors
-        \2 Room generaion must not interfere with guaranteed path through maze
-    \1 Prototype level re-generation
-        \2 Design method to procedurally re-generate sections of the level as the player moves trhough it
-    \1 Add gameplay elements
-        \2 Decide on how a level is finished by the player
-        \2 Provide some interest and threat while navigating the level
-        \2 Provide means of assisting in navigation (not just blinding searching for the goal
-    \1 Implement final designs for level generation
-        \2 Include use of non-prototype textures
-        \2 Ensure performance meets goals 
-\end{outline}
+The epics also contain very high-level user stories, which provide a little more detail. These were decided at the project outset, then refined during development. Before any user story is embarked upon, it is further refined into detailed requirements. 
 
-- Gantt chart and progress against it
+\subsection{Implementation plan}
+
+With the high-level design documented in the epics, planning of these epics against timescales was required. 
+
+
+
 
 \subsection{Requirements and prioritisation}
 
@@ -94,7 +82,7 @@ While all the stories were not required at the outset, as part of the planning, 
 \subsubsection{Guaranteed path generation}
 The first part of the design to be implemented required a guaranteed path through a maze to be generated. This was achieved by using a random walk - a stochastic process implmented in two dimensions to provide a definite route through the maze.
 
-The random walk is implemented using an agent based approach. The agent can choose from three random  directions to travel in - left, right or down. The probability of these directions being chosen are as follows:
+The random walk is implemented using an agent based approach. The agent can choose from three random directions to travel in - left, right or down. These probabilities are detailed in Table \ref{tab:probdirs}.
 
 \begin{table}[h!]
     \centering
@@ -106,15 +94,13 @@ The random walk is implemented using an agent based approach. The agent can choo
     \hline
     \end{tabular}
     \caption{A table showing probability of direction random walk agent will take}
+    \label{tab:probdirs}
     \end{table}
 
 This skewed probability distribution encourages the path generating agent to meander left and right more than moving down, generating a path that is longer and doubles back on itself more.
 
-\begin{wrapfigure}{l}{0.5\textwidth}
-    \includegraphics[width=6cm]{img/1-maze.png}
-    \caption{A top-down view of the guaranteed path generation}
-    \label{fig:wrapfig}
-    \end{wrapfigure}
+
+
 \end{section}
 
 When the agent has chosen a valid direction, it randomly selects a valid tile. To aid in creating an interesting maze, the agent can choose from a variety of pre-made tiles with varying exits. For example, it may choose to generate a room with only left and right openings, or a tile with openings on the left, right and down-facing aspects. 
@@ -131,6 +117,65 @@ These bounds are adjusted by parameters, which aid in development and testing an
 - Changes to aims/scope/work plan
 \end{section}
 
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[]
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}ll@{}}
+    \toprule
+    \multicolumn{1}{l|}{\textbf{Epic}} & \textbf{Stories} \\ \midrule
+    \multicolumn{2}{l}{Build base "first person" 3D game features} \\
+     & Provides a basic level design \\
+     & Proves the concepts of vision and movement \\ \midrule
+    \multicolumn{2}{l}{Prototype level generation} \\
+     & Prove a method of generating a guaranteed path through a maze \\
+     & Prove a method of filling in non-guaranteed paths through the maze \\ \midrule
+    \multicolumn{2}{l}{Prototype room generation} \\
+     & Prove a method of generating room interiors \\
+     & Room generation must not interfere with guaranteed path \\ \midrule
+    \multicolumn{2}{l}{Prototype level re-generation} \\
+     & Design method to procedurally re-generate level sections \\ \midrule
+    \multicolumn{2}{l}{Add gameplay elements} \\
+     & Decide on how level is finished by the player \\
+     & Provide some interest and threat when playing \\
+     & Provide means of assisting navigation \\ \midrule
+    \multicolumn{2}{l}{Implement final designs} \\
+     & Use non-prototype textures \\
+     & Ensure performance meets goals \\ \bottomrule
+    \end{tabular}%
+    }
+    \caption{Agile-style epics and associated user stories}
+    \label{tab:epics}
+    \end{table}
+
+
 \bibliography{sources}
+
+\newpage
+
+\appendix
+
+\begin{section}{Gantt charts}
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+    \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{img/gantt-original.png}
+    \caption{Gantt chart of original plan}
+    \label{fig:gantt1}
+\end{wrapfigure}
+
+\end{section}
+
+\begin{section}{Diagrams}
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+    \includegraphics[width=6cm]{img/1-maze.png}
+    \caption{A top-down view of the guaranteed path generation}
+    \label{fig:pathgen}
+\end{wrapfigure}
+
+\end{section}
 
 \end{document}
