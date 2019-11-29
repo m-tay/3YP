@@ -1,10 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - CharacterController
     - LevelGenerator
     - MainMenuHandler
     - MouseCamLook
+    - PlayerControl
+    - Readme
+    - RoomAdder
     Unity.ProBuilder.dll:
     - UnityEngine.ProBuilder.ProBuilderMesh
     UnityEditor.TestRunner.dll:
@@ -37,11 +39,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 43
       Script: {instanceID: 0}
+    - Class: 45
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -56,10 +62,14 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10204}
     - Class: 114
-      Script: {instanceID: 11864}
+      Script: {instanceID: 11508}
     - Class: 114
-      Script: {instanceID: 12166}
+      Script: {instanceID: 11872}
+    - Class: 114
+      Script: {instanceID: 12174}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -93,17 +103,68 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10000}
     - Class: 114
-      Script: {instanceID: 10498}
+      Script: {instanceID: 10468}
     - Class: 114
-      Script: {instanceID: 10980}
+      Script: {instanceID: 10502}
     - Class: 114
-      Script: {instanceID: 11598}
+      Script: {instanceID: 10986}
     - Class: 114
-      Script: {instanceID: 12010}
+      Script: {instanceID: 11606}
     - Class: 114
-      Script: {instanceID: 12076}
+      Script: {instanceID: 12018}
     - Class: 114
-      Script: {instanceID: 19038}
+      Script: {instanceID: 12084}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/WinScreen.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9720}
+    - Class: 114
+      Script: {instanceID: 9948}
+    - Class: 114
+      Script: {instanceID: 10000}
+    - Class: 114
+      Script: {instanceID: 10468}
+    - Class: 114
+      Script: {instanceID: 10502}
+    - Class: 114
+      Script: {instanceID: 10986}
+    - Class: 114
+      Script: {instanceID: 11606}
+    - Class: 114
+      Script: {instanceID: 12018}
+    - Class: 114
+      Script: {instanceID: 12084}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -301,10 +362,22 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 4701124375376784d36e75448a05319a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GE_UIResponder
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: cfebbcd3ae3c83db78ba68e31c925e00
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuHandler
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -371,6 +444,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GE_ToggleFullScreenUI
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -475,6 +554,12 @@ ScriptsOnlyBuild:
     className: Readme
   - hash:
       serializedVersion: 2
+      Hash: d9f97edc926aba0873391b92e08dbab0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RoomAdder
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -511,7 +596,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: cf1656d995181a993e8276b080033c90
+      Hash: 59d60a86d7ef51fdeb3bfb13e1561c40
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelGenerator
@@ -604,21 +689,16 @@ ScriptsOnlyBuild:
       Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CharacterController
+    className: PlayerControl
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: cfebbcd3ae3c83db78ba68e31c925e00
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenuHandler
   platform: 5
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/GameLevel.unity
+  - Assets/Scenes/WinScreen.unity
   playerPath: C:/Users/Matt/Desktop/btest/Test drive.exe

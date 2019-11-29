@@ -67,11 +67,15 @@ The project itself is divided into Agile "sprints". It was decided to deliver a 
 
 While all the stories were not required at the outset, as part of the planning, it was decided to plot rough timescales against Agile "epics". These epics provide a high-level view of functionality and are detailed in Table \ref{tab:epics} on page \pageref{tab:epics}.
 
-The epics also contain very high-level user stories, which provide a little more detail. These were decided at the project outset, then refined during development. Before any user story is embarked upon, it is further refined into detailed requirements. 
+The epics also contain very high-level user stories, which provide a little more detail. These were decided at the project outset, then refined during development. Before any user story can be developed, it is required that more detailed requirements are written. These are then recorded and tracked on Trello. 
 
 \subsection{Implementation plan}
 
-With the high-level design documented in the epics, planning of these epics against timescales was required. 
+With the high-level design documented in the epics, planning of these epics against timescales was required. This timeline plan is visible in \ref{fig:gantt1} on page \pageref{fig:gantt1}. Progress was then tracked against this Gantt chart to ensure that progress was being made and that the project could be achieved as planned.
+
+\subsection{UML}
+
+As the project began, a UML diagram was designed to provide a high level framework to work towards. Unity provides some pre-defined structure, in that all game objects must be part of a Scene object to work. Aside from this, Unity does not prescribe a lot of structure, so having a UML design to begin with was useful. The initial UML design can be seen in Figure \ref{fig:uml1} on page \pageref{fig:uml1}.
 
 
 
@@ -119,9 +123,44 @@ These bounds are adjusted by parameters, which aid in development and testing an
 
 
 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-% \usepackage{graphicx}
+
+
+
+\bibliography{sources}
+
+\newpage
+
+\appendix
+
+\begin{section}{Gantt charts}
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+    \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{img/gantt-original.png}
+    \caption{Gantt chart of original plan}
+    \label{fig:gantt1}
+\end{wrapfigure}
+
+\end{section}
+
+\begin{section}{Diagrams}
+
+\begin{wrapfigure}{h!}{0.5\textwidth}
+    \includegraphics[width=6cm]{img/1-maze.png}
+    \caption{A top-down view of the guaranteed path generation}
+    \label{fig:pathgen}
+\end{wrapfigure}
+
+\begin{wrapfigure}{h!}{0.5\textwidth}
+    \includegraphics[width=\textwidth]{img/uml1.png}
+    \caption{Initial UML diagram}
+    \label{fig:uml1}
+\end{wrapfigure}
+
+\end{section}
+
+\begin{section}{Tables}
+
+% epic/story table
 \begin{table}[]
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{@{}ll@{}}
@@ -149,32 +188,7 @@ These bounds are adjusted by parameters, which aid in development and testing an
     }
     \caption{Agile-style epics and associated user stories}
     \label{tab:epics}
-    \end{table}
-
-
-\bibliography{sources}
-
-\newpage
-
-\appendix
-
-\begin{section}{Gantt charts}
-
-\begin{wrapfigure}{l}{0.5\textwidth}
-    \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{img/gantt-original.png}
-    \caption{Gantt chart of original plan}
-    \label{fig:gantt1}
-\end{wrapfigure}
-
-\end{section}
-
-\begin{section}{Diagrams}
-
-\begin{wrapfigure}{l}{0.5\textwidth}
-    \includegraphics[width=6cm]{img/1-maze.png}
-    \caption{A top-down view of the guaranteed path generation}
-    \label{fig:pathgen}
-\end{wrapfigure}
+\end{table}
 
 \end{section}
 
