@@ -6,6 +6,7 @@
 \usepackage{outlines}
 \usepackage{booktabs}
 \usepackage{appendix}
+\usepackage{float}
 \graphicspath{ {./} }
 
 \title{Third Year Project: Progress Report}
@@ -73,9 +74,19 @@ The epics also contain very high-level user stories, which provide a little more
 
 With the high-level design documented in the epics, planning of these epics against timescales was required. This timeline plan is visible in \ref{fig:gantt1} on page \pageref{fig:gantt1}. Progress was then tracked against this Gantt chart to ensure that progress was being made and that the project could be achieved as planned.
 
+As the project is run using Agile principles, the Gantt chart has been revised to reflect changes to the plan. These changes are visible in Figure \ref{fig:gantt2} on page \pageref{fig:gantt2}. Also included is the progress of the tasks so far.
+
+Changes to the Gantt chart include the addition of a Level Generation task - the Level Re-Generator. This reflects a focus of the project on procedurally re-generating levels in real-time, so this has been split out as a seperate task and given a shorter timescale, reflecting the importance of the task to the project.
+
+The gameplay section has been split into two tasks, reflecting the focus on implementing core gameplay as a priority, with enhanced gameplay being desirable but not as critical to the evaluation of success of the project.
+
+
+
 \subsection{UML}
 
-As the project began, a UML diagram was designed to provide a high level framework to work towards. Unity provides some pre-defined structure, in that all game objects must be part of a Scene object to work. Aside from this, Unity does not prescribe a lot of structure, so having a UML design to begin with was useful. The initial UML design can be seen in Figure \ref{fig:uml1} on page \pageref{fig:uml1}.
+As the project began, a UML diagram was designed to provide a high level framework to work towards. Unity provides some pre-defined structure, in that all game objects must be part of a Scene object to work. Aside from this, Unity does not prescribe much structure, so a UML design to begin with was useful. The initial UML design can be seen in Figure \ref{fig:uml1} on page \pageref{fig:uml1}.
+
+This design was iterated upon as the prototype stage progressed. This can be seen in Figure \ref{fig:uml2} on page \pageref{fig:uml2}, which shows the definition of classes being enhanced with the additional methods and attributes required to support the design, as well as the addition of the \textbf{Level Re-Generator} class.
 
 
 
@@ -134,27 +145,39 @@ These bounds are adjusted by parameters, which aid in development and testing an
 
 \begin{section}{Gantt charts}
 
-\begin{wrapfigure}{l}{0.5\textwidth}
+\begin{figure}[H]
     \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{img/gantt-original.png}
     \caption{Gantt chart of original plan}
     \label{fig:gantt1}
-\end{wrapfigure}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth,height=0.9\textheight,keepaspectratio]{img/gantt-updated.png}
+    \caption{Gantt chart of updated plan}
+    \label{fig:gantt2}
+\end{figure}
 
 \end{section}
 
 \begin{section}{Diagrams}
 
-\begin{wrapfigure}{h!}{0.5\textwidth}
+\begin{figure}[H]
     \includegraphics[width=6cm]{img/1-maze.png}
     \caption{A top-down view of the guaranteed path generation}
     \label{fig:pathgen}
-\end{wrapfigure}
+\end{figure}
 
-\begin{wrapfigure}{h!}{0.5\textwidth}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/uml1.png}
     \caption{Initial UML diagram}
     \label{fig:uml1}
-\end{wrapfigure}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/uml2.png}
+    \caption{Redesigned UML diagram}
+    \label{fig:uml2}
+\end{figure}
 
 \end{section}
 
