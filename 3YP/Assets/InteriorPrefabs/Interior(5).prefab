@@ -86,6 +86,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999995
@@ -130,11 +134,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -155,6 +154,11 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
       objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
 --- !u!4 &1550548605168103969 stripped
@@ -173,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_Name
       value: Neo_Wall_snaps001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -218,11 +226,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -242,6 +245,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
+      objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
@@ -610,6 +618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.5
@@ -654,11 +666,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -679,6 +686,11 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
       objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
 --- !u!4 &6541271821706954523 stripped
@@ -697,6 +709,10 @@ PrefabInstance:
     - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -742,11 +758,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -767,6 +778,11 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
       objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
 --- !u!4 &7140925033565615017 stripped
@@ -785,6 +801,10 @@ PrefabInstance:
     - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -830,11 +850,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -855,6 +870,11 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
       objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
 --- !u!4 &7148855456048376153 stripped
@@ -873,6 +893,10 @@ PrefabInstance:
     - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -918,11 +942,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -943,6 +962,11 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
       objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
 --- !u!4 &7567171492962452361 stripped
@@ -961,6 +985,10 @@ PrefabInstance:
     - target: {fileID: 1004591016397366, guid: da357e76d65d042449b88c33e35ff8fd, type: 3}
       propertyPath: m_Name
       value: Neo_WallDoubleDoorFrame_snaps001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004591016397366, guid: da357e76d65d042449b88c33e35ff8fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4387425507242218, guid: da357e76d65d042449b88c33e35ff8fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1006,12 +1034,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33389304844216096, guid: da357e76d65d042449b88c33e35ff8fd,
+    - target: {fileID: 64432440436474392, guid: da357e76d65d042449b88c33e35ff8fd,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 64432440436474392, guid: da357e76d65d042449b88c33e35ff8fd,
+    - target: {fileID: 33389304844216096, guid: da357e76d65d042449b88c33e35ff8fd,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1170,6 +1198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.5
@@ -1214,11 +1246,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -1239,6 +1266,11 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
       objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
 --- !u!4 &8323788621344526144 stripped
@@ -1257,6 +1289,10 @@ PrefabInstance:
     - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1302,11 +1338,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -1327,6 +1358,11 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
       objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}
 --- !u!4 &8331665074473772311 stripped
@@ -1345,6 +1381,10 @@ PrefabInstance:
     - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_Name
       value: Neo_Wall_snaps001 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720321481462350, guid: c73151b2c863d094393f47d50c325553, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4160519767647610, guid: c73151b2c863d094393f47d50c325553, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1390,11 +1430,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 64734768092488202, guid: c73151b2c863d094393f47d50c325553,
         type: 3}
       propertyPath: m_Mesh
@@ -1414,6 +1449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tangents.Array.data[135].y
       value: -0.0000000026397395
+      objectReference: {fileID: 0}
+    - target: {fileID: 33553627297125890, guid: c73151b2c863d094393f47d50c325553,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c73151b2c863d094393f47d50c325553, type: 3}

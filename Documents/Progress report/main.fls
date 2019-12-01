@@ -377,13 +377,16 @@ INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\helvetic\ph
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\helvetic\phvb8r.tfm
+INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\helvetic\phvb8t.vf
+INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\helvetic\phvb8t.vf
-INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\main.bbl
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\main.bbl
+INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmri8t.vf
+INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\gantt-original.png
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\gantt-original.png
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\gantt-original.png
@@ -399,6 +402,11 @@ INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\1-maze.pn
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\1-maze.png
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\1-maze.png
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\1-maze.png
+INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\filled-path.png
+INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\filled-path.png
+INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\filled-path.png
+INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\filled-path.png
+INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\filled-path.png
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\uml1.png
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\uml1.png
 INPUT c:\Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\img\uml1.png
@@ -423,3 +431,5 @@ INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\urw\times\utmr
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\urw\times\utmr8a.pfb
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\urw\times\utmr8a.pfb
 INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\urw\times\utmr8a.pfb
+INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\urw\times\utmri8a.pfb
+INPUT C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\urw\times\utmri8a.pfb
