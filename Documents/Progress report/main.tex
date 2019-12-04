@@ -35,20 +35,27 @@ The motivation behind the project's aims are to explore new and interesting conc
 
 \begin{section}{Issues and problems}
 
+This section will detail the issues identified at the project commencement and then detail how they have been addressed.
+
 \subsection{Project scope}
 Procedural content generation is a large field that has been explored in the literature since the 1980s. The paper \cite{Hendrikx:2013:PCG:2422956.2422957} details this, providing a survey of PCG in games and the many techniques that have been used. A potential issue of the project is attempting to explore and implement too many of these techniques and ending up with a dilted project of little technical interest. 
 
-To avoid this, the project scope was focussed on some areas identified as being under explored in the survey - level generation in real time systems. This will allow the project to explore several ideas in this domain and provide a comprehensive implementation in a fully featured game.
+To address this, the project scope was focussed on some areas identified as being under explored in the survey - level generation in real time systems. This will allow the project to explore several ideas in this domain and provide a comprehensive implementation in a fully featured game.
 
 \subsection{Designing 3D games}
-Designing 3D games and the assets required to populate the levels created could take a long time, especially if much of the functionality is created from scratch. To enable the project's aims to be achieved in a realistic timeframe, the Unity game engine was chosen. This tool enables relatively rapid production 3D game enviroments, supporting the design of assets and enabling quick prototyping of ideas. Unity supports the use of C\# as a scripting language to program game features in. It also provided a lot of documentation, which was useful in learning the framework and the systems it provides. Much of the initial stages of the project focussed on learning Unity.
+Designing 3D games and the assets required to populate the levels created could take a long time, especially if much of the functionality is created from scratch. 
+
+To address this, the project's aims to be achieved in a realistic timeframe, the Unity game engine was chosen. This tool enables relatively rapid production 3D game enviroments, supporting the design of assets and enabling quick prototyping of ideas. Unity supports the use of C\# as a scripting language to program game features in. It also provided a lot of documentation, which was useful in learning the framework and the systems it provides. Much of the initial stages of the project focussed on learning Unity.
 
 \subsection{Performance}
-A game's performance is a critical aspect of it's success. If the game cannot be played in a sustainable framerate on common hardware, it could be considered a techncial failure. The prototype stage considered performance at every aspect, in two ways.
+A game's performance is a critical aspect of it's success. If the game cannot be played in a sustainable framerate on common hardware, it could be considered a techncial failure. Performance is a broad term, so the project will specifically focus on the following two aspects of performance.
 
-One performance issue could be \textbf{level generation speed}. Each time the game loads, a new level is generated, so achieving a suitable speed in generating the levels and performing the associated work, like loading geometry, was a key consideration.
+The first aspect is \textbf{level generation speed}. Each time the game loads, a new level is generated, so achieving a suitable speed in generating the levels and performing the associated work, like loading geometry, was a key consideration.
 
-Another could be \textbf{framerate}. The project will procedurally load a considerable amount of geometry in varied conditions. As much of the geometry will not be static, it will be required to load a large amount of meshes into memory, which could affect the performance.  
+The second aspect is \textbf{framerate}. The project will procedurally load a considerable amount of geometry in varied conditions. As much of the geometry will not be static, it will be required to load a large amount of meshes into memory, which could affect the performance.  
+
+To address this, the prototype stage considered performance throughout it's development. To monitor level generation speed, timing code was added to measure performance of the generation process, seperate to the rest of the Unity code. This allows monitoring of the procedural process and testing at various constraints and level sizes. To monitor framerate, the project implements an FPS display on the game's user interface in real time, which allows performance to be monitored while the game is played. 
+
 
 \subsection{Evaluation of success} \label{evalsuccess}
 A key issue with this project is evaluating if it is successful. If there is no clear notion of what success looks like, the project could progress in unproductive directions. Below are the key measures of success chosen at the start of the project to measure success against.
@@ -63,14 +70,13 @@ The decoration in each individual room will contribute to how convincing and han
 
 Of particular focus will be generating furniture and objects in and around that furniture that is generated, but remains plausable. To use this as a measure of success in the project, attention will be paid to the interior decoration being unique in each room, yet also being plausable (ie. no bookcases facing walls, chairs in doorways, etc.)
 
-
 \subsubsection{Performance}
 Performance is another key component of the project succeeding. If the game responds poorly, it will be frustrating to play. Performance will be measured in a few ways:
 \newline
 \begin{compactitem}
     \item{\textbf{Frame rate}: must be at least 30 frames per second}
     \item{\textbf{Initial loading time}: must take less than 30 seconds}
-    \item{\textbf{Smooth level re-generation}: no dip in framerate}
+    \item{\textbf{Smooth level re-generation}: no dip in framerate below 30 frames per second}
 \end{compactitem}
 
 
@@ -108,19 +114,15 @@ This design was iterated upon as the prototype stage progressed. This can be see
 
 \subsection{Requirements and prioritisation}
 
+
+
 \subsection{Design}
 \subsubsection{Guaranteed path generation}
 The first part of the design to be implemented required a guaranteed path through a maze to be generated. This was achieved by using a random walk - a stochastic process implmented in two dimensions to provide a definite route through the maze.
 
 The random walk is implemented using an agent based approach. The agent can choose from three random directions to travel in - left, right or down. These probabilities are detailed in Table \ref{tab:probdirs}.
 
-
-
 This skewed probability distribution encourages the path generating agent to meander left and right more than moving down, generating a path that is longer and doubles back on itself more.
-
-
-
-\end{section}
 
 When the agent has chosen a valid direction, it randomly selects a valid tile. To aid in creating an interesting maze, the agent can choose from a variety of pre-made tiles with varying exits. For example, it may choose to generate a room with only left and right openings, or a tile with openings on the left, right and down-facing aspects. 
 
@@ -130,7 +132,7 @@ The agent is given bounds and restrictions while it is performing the random wal
 
 These bounds are adjusted by parameters, which aid in development and testing and can be adjusted based on performance or desired level size.
 
-
+\end{section}
 
 \begin{section}{Evaluation of progress}
 
@@ -150,11 +152,6 @@ In Section \ref{evalsuccess} on page \pageref{evalsuccess}, three measures of su
 Against the \textbf{Convincing Levels} measure, the project has the potential to succeed. The guaranteed path/tile filling combination creates large levels, with a path through them. The project does not currently take steps to block off many of the non-guaranteed path tile transitions, so the tile structure is disernable - it is quite easy in parts to see how the tiles are laid out. Future 
 
 \end{section}
-
-
-
-
-
 
 \bibliography{sources}
 
@@ -238,6 +235,53 @@ Against the \textbf{Convincing Levels} measure, the project has the potential to
     }
     \caption{Agile-style epics and associated user stories}
     \label{tab:epics}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{llll}
+    \hline
+    \multicolumn{1}{|l|}{\textbf{Requirement type}} & \multicolumn{1}{l|}{\textbf{Requirement}} & \multicolumn{1}{l|}{\textbf{Priority}} & \multicolumn{1}{l|}{\textbf{Status}} \\ \hline
+    Epic & Write Project Proposal & Should Have & Done \\
+    - Requirement & Research PCG & Should Have & Done \\
+    - Requirement & Write proposal & Should Have & Done \\ \hline
+    Epic & Write Literature Review & Should Have & Done \\
+    - Requirement & Research/find literature & Should Have & Done \\
+    - Requirement & Get feedback & Should Have & Done \\
+    - Requirement & Write review & Should Have & Done \\ \hline
+    Epic & Build base FPS features & Must Have & Done \\
+    - Requirement & Create title/game over screens & Should Have & Done \\
+    - Requirement & Create end goal, transitions to end screens & Should Have & Done \\
+    - Requirement & Implement first person controller & Must Have & Done \\ \hline
+    Epic & Prototype level generation & Must Have & Done \\
+    - Requirement & Design room tile prefabs & Must Have & Done \\
+    - Requirement & Implement "random walk" generation & Must Have & Done \\
+    - Requirement & Implement maze filling algorithm & Must Have & Done \\
+    - Requirement & Implement different sized tiles & Could Have &  \\ \hline
+    Epic & Prototype room decoration & Must Have & Done \\
+    - Requirement & Design room decoration prefabs & Must Have & Done \\
+    - Requirement & Implement room decoration filling algorithm & Must Have & Done \\
+    - Requirement & Design random sub-decorator agents & Could Have & Done \\ \hline
+    Epic & Progress report & Must Have & Done \\
+    - Requirement & Design plan & Should Have & Done \\
+    - Requirement & Write first draft & Should Have & Done \\
+    - Requirement & Write final draft and submit & Must Have &  \\ \hline
+    Epic & Prototype re-generation & Must Have &  \\
+    - Requirement & Design approach for re-generating parts of level in real-time & Must Have &  \\
+    - Requirement & Implement re-generation process & Must Have &  \\
+    - Requirement & Implement re-generation trigger process & Must Have &  \\ \hline
+    Epic & Level generator & Must Have &  \\ \hline
+    Epic & Room generator & Must Have &  \\ \hline
+    Epic & Level re-generator & Must Have &  \\ \hline
+    Epic & Basic gameplay & Must Have &  \\ \hline
+    Epic & Enhanced gameplay & Should Have &  \\ \hline
+    Epic & Final report & Must Have &  \\ \hline
+    \end{tabular}%
+    }
+    \caption{A table showing epics and requirements, their priorities and statuses}
+    \label{tab:epicreqs}
 \end{table}
 
 \begin{table}[h!]

@@ -423,7 +423,7 @@
                 \else
                     {\Large  \@myauthor}\\[\baselineskip]
                 \fi
-                {\large registration:~\@registration}
+                {\large Registration:~\@registration}
                 \vspace*{\fill}
         \end{center}
         \newpage

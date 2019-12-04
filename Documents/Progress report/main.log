@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  1 DEC 2019 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.10.2)  4 DEC 2019 16:14
 entering extended mode
 **"c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.tex"
 ("c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/main.tex"
@@ -1291,78 +1291,82 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 24.
  [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 71.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 77.
 ("C:\Users\Matt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
- [4] [5] ("c:/Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\main.bbl" [6]) [7]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+ [4] [5] [6] ("c:/Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\main.bbl") [7]
 <img/gantt-original.png, id=102, 1156.82187pt x 347.79938pt>
 File: img/gantt-original.png Graphic file (type png)
 <use img/gantt-original.png>
-Package pdftex.def Info: img/gantt-original.png  used on input line 168.
+Package pdftex.def Info: img/gantt-original.png  used on input line 165.
 (pdftex.def)             Requested size: 418.25603pt x 125.749pt.
 <img/gantt-updated.png, id=103, 1040.38687pt x 356.83313pt>
 File: img/gantt-updated.png Graphic file (type png)
 <use img/gantt-updated.png>
-Package pdftex.def Info: img/gantt-updated.png  used on input line 174.
+Package pdftex.def Info: img/gantt-updated.png  used on input line 171.
 (pdftex.def)             Requested size: 418.24287pt x 143.44943pt.
 <img/1-maze.png, id=104, 470.75874pt x 274.52562pt>
 File: img/1-maze.png Graphic file (type png)
 <use img/1-maze.png>
-Package pdftex.def Info: img/1-maze.png  used on input line 184.
+Package pdftex.def Info: img/1-maze.png  used on input line 181.
 (pdftex.def)             Requested size: 170.71652pt x 99.55382pt.
 <img/filled-path.png, id=105, 225.2415pt x 246.01912pt>
 File: img/filled-path.png Graphic file (type png)
 <use img/filled-path.png>
-Package pdftex.def Info: img/filled-path.png  used on input line 190.
+Package pdftex.def Info: img/filled-path.png  used on input line 187.
 (pdftex.def)             Requested size: 170.71652pt x 186.46968pt.
  [8 <c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/img/gantt-original.png> <c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/img/gantt-updated.png> <c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/img/1-maze.png>]
 <img/uml1.png, id=113, 824.07875pt x 643.40375pt>
 File: img/uml1.png Graphic file (type png)
 <use img/uml1.png>
-Package pdftex.def Info: img/uml1.png  used on input line 198.
+Package pdftex.def Info: img/uml1.png  used on input line 195.
 (pdftex.def)             Requested size: 418.25372pt x 326.55095pt.
 <img/uml2.png, id=115, 824.07875pt x 783.92876pt>
 File: img/uml2.png Graphic file (type png)
 <use img/uml2.png>
-Package pdftex.def Info: img/uml2.png  used on input line 204.
+Package pdftex.def Info: img/uml2.png  used on input line 201.
 (pdftex.def)             Requested size: 418.25372pt x 397.87253pt.
  [9 <c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/img/filled-path.png> <c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/img/uml1.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 214.
+               Default added (so using `tbp') on input line 211.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 242.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/img/uml2.png>] [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
+[10 <c:/Users/Matt/Google Drive/Uni/3YP/Documents/Progress report/img/uml2.png>] [11] [12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 302.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 302.
  ("c:/Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 302.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 302.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 302.
  ) 
 Here is how much of TeX's memory you used:
- 36388 strings out of 492895
- 731528 string characters out of 3124202
- 870525 words of memory out of 3000000
- 39754 multiletter control sequences out of 15000+200000
+ 36391 strings out of 492895
+ 731565 string characters out of 3124202
+ 882525 words of memory out of 3000000
+ 39755 multiletter control sequences out of 15000+200000
  579706 words of font info for 77 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,11n,73p,9221b,810s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,11n,73p,9221b,812s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Matt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\main.pdf" (13 pages, 343382 bytes).
+Output written on "c:/Users\Matt\Google Drive\Uni\3YP\Documents\Progress report\main.pdf" (14 pages, 346189 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
  251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
