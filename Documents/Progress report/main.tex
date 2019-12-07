@@ -54,9 +54,6 @@ The first aspect is \textbf{level generation speed}. Each time the game loads, a
 
 The second aspect is \textbf{framerate}. The project will procedurally load a considerable amount of geometry in varied conditions. As much of the geometry will not be static, it will be required to load a large amount of meshes into memory, which could affect the performance.  
 
-To address this, the prototype stage considered performance throughout it's development. To monitor level generation speed, timing code was added to measure performance of the generation process, seperate to the rest of the Unity code. This allows monitoring of the procedural process and testing at various constraints and level sizes. To monitor framerate, the project implements an FPS display on the game's user interface in real time, which allows performance to be monitored while the game is played. 
-
-
 \subsection{Evaluation of success} \label{evalsuccess}
 A key issue with this project is evaluating if it is successful. If there is no clear notion of what success looks like, the project could progress in unproductive directions. Below are the key measures of success chosen at the start of the project to measure success against.
 
@@ -114,23 +111,24 @@ This design was iterated upon as the prototype stage progressed. This can be see
 
 \subsection{Requirements and prioritisation}
 
+The project defined epics (or, high level requirements) at the outset, with more detailed requirements written at each stage. This allows the project the be flexible, with lessons learned in the prototyping incorporated into future requirements. It also saves time, because requirements do not need to be written in advance when they would likely be changed anyway.
+
+The epics and requirements written for the project so far are available in the appendix in Table \ref{tab:epicreqs} on \pageref{tab:epicreqs}.
 
 
-\subsection{Design}
+\subsection{Design prototypes}
 \subsubsection{Guaranteed path generation}
 The first part of the design to be implemented required a guaranteed path through a maze to be generated. This was achieved by using a random walk - a stochastic process implmented in two dimensions to provide a definite route through the maze.
 
-The random walk is implemented using an agent based approach. The agent can choose from three random directions to travel in - left, right or down. These probabilities are detailed in Table \ref{tab:probdirs}.
+The random walk is implemented using an agent based approach. The agent can choose from three random directions to travel in - left, right or down. These probabilities are detailed in Table \ref{tab:probdirs}. When the agent has chosen a valid direction, it randomly selects a valid tile. 
 
-This skewed probability distribution encourages the path generating agent to meander left and right more than moving down, generating a path that is longer and doubles back on itself more.
+The agent has methods of checking where it has been and where it is going next, so that it picks valid tiles that have openings in the directions it has come from and intends to go. The agent is given bounds and restrictions while it is performing the random walk, which provides a method of parameterising the level and deciding on an endpoint. 
 
-When the agent has chosen a valid direction, it randomly selects a valid tile. To aid in creating an interesting maze, the agent can choose from a variety of pre-made tiles with varying exits. For example, it may choose to generate a room with only left and right openings, or a tile with openings on the left, right and down-facing aspects. 
+\subsubsection{Decoration of rooms}
 
-The agent has methods of checking where it has been and where it is going next, so that it picks valid tiles that have openings in the directions it has come from and intends to go.
+Rooms are decorated with interior sub-dividing walls and other elements to provide a convincing and interesting environment to traverse. Decoration is achieved by populating each room with a random pre-defined set of geometry, examples of which can be seen in Figures \ref{fig:prefab-room}, \ref{fig:prefab-int} and \ref{fig:room} starting on page \pageref{fig:prefab-room}. 
 
-The agent is given bounds and restrictions while it is performing the random walk. These bounds ensure the generation does not stray too far left or right. When the agent reaches the lowest down-bound, it stops generating the level and spawns the level's goal in the final tile it generated.
-
-These bounds are adjusted by parameters, which aid in development and testing and can be adjusted based on performance or desired level size.
+In the prototype design, a single point is used to populate all geometry from the centre of the room. However, iterations on the design will use several points which an agent will scan through to populate things like sub-rooms, corridors, walls and desks with appropriate decorations, providing considerable variation for little asset generation cost.
 
 \end{section}
 
@@ -150,6 +148,16 @@ The \textbf{Add Enhanced Gameplay} task was also added, to provide a marked diff
 In Section \ref{evalsuccess} on page \pageref{evalsuccess}, three measures of success for the project were defined. 
 
 Against the \textbf{Convincing Levels} measure, the project has the potential to succeed. The guaranteed path/tile filling combination creates large levels, with a path through them. The project does not currently take steps to block off many of the non-guaranteed path tile transitions, so the tile structure is disernable - it is quite easy in parts to see how the tiles are laid out. Future 
+
+Against the \textbf{Convincing Decoration} measure, the project again has the potential to succeed. The prototype of the room decoration system works, but would require quite a lot of manual content generation. However, the project has also successfully implemented agent based approaches to creating levels, so a combination of hand-crafted content and procedural generation should enable rooms to be decorated in ways that are procedural and unique, but also in ways that make sense to humans.
+
+Against the \textbf{Performance} measure is where the project has faced the most challenges. The level generation algorithm is quite efficient. As presented in \ref{tab:gentimes} on \pageref{tab:gentimes}, even when large sizes are used the generation and instantiation time does not increase by much. Indeed, the main constraint around generating large levels is not the time to generate them, but the real-time performance of the levels.
+
+The real-time aspect suffered greatly when large levels were generated. Average FPS was low (around 10 FPS) when levels and decoration was applied to suitable level sizes for a playable game. This resulted from a few factors. One major factor is that although Unity supports occlusion culling, it is required to be "baked" or pre-defined. As the project generates all it's level geometry procedurally, it is not possible to use any occlusion culling using Unity's standard methods. This was overcome by reducing the viewing frustrum size from it's default size to one more suitable for navigating a closed maze-like level, as demonstrated in Figure \ref{fig:frustrums} on page \ref{fig:frustrums}.
+
+In addition to this, global illumination shadows were removed, as they are not required in the closed rooms of the maze. 
+
+These changes resulted in a change of the average FPS from 10 FPS to 60 FPS - well above the threshold required by the performance metric.
 
 \end{section}
 
@@ -178,33 +186,74 @@ Against the \textbf{Convincing Levels} measure, the project has the potential to
 \begin{section}{Diagrams}
 
 \begin{figure}[H]
-    \includegraphics[width=6cm]{img/1-maze.png}
+    \centering
+    \includegraphics[width=8cm]{img/1-maze.png}
     \caption{A top-down view of the guaranteed path generation}
     \label{fig:pathgen}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[width=6cm]{img/filled-path.png}
+    \centering
+    \includegraphics[width=8cm]{img/filled-path.png}
     \caption{A top-down view of the guaranteed path with remaining tiles filled in}
     \label{fig:filledpath}
 \end{figure}
 
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{img/frustrums.png}
+    \caption{A top-down of the difference in default and optimised viewing frustrum sizes}
+    \label{fig:frustrums}
+\end{figure}
 
 \begin{figure}[H]
+    \centering
     \includegraphics[width=\textwidth]{img/uml1.png}
     \caption{Initial UML diagram}
     \label{fig:uml1}
 \end{figure}
 
 \begin{figure}[H]
+    \centering
     \includegraphics[width=\textwidth]{img/uml2.png}
     \caption{Redesigned UML diagram}
     \label{fig:uml2}
 \end{figure}
 
+
+
 \end{section}
 
+\begin{section}{Screenshots}
+    
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{img/prefabroom.png}
+    \caption{A screenshot of a room tile, showing the walls and exits of a tile (with the ceiling hidden)}
+    \label{fig:prefab-room}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{img/interior.png}
+    \caption{A screenshot of a room interior, designed to fit into any tile with any exit}
+    \label{fig:prefab-int}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{img/imp-int.png}
+    \caption{A screenshot of a procedurally generated room, with the tile and interior composited in a real-time environment}
+    \label{fig:room}
+\end{figure}
+
+
+
+\end{section}
+
+\newpage
 \begin{section}{Tables}
 
 % epic/story table
@@ -288,7 +337,7 @@ Against the \textbf{Convincing Levels} measure, the project has the potential to
     \centering
     \begin{tabular}{ |c|c|c| }
     \hline
-    Left & Right & Down \\ 
+    \textbf{Left} & \textbf{Right} & \textbf{Down} \\ 
     \hline
     40\% & 40\% & 20\%\\ 
     \hline
@@ -296,6 +345,21 @@ Against the \textbf{Convincing Levels} measure, the project has the potential to
     \caption{A table showing probability of direction random walk agent will take}
     \label{tab:probdirs}
 \end{table}
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Level size} & \textbf{Generation time} \\ \hline
+    4 x 6 & 6.34 seconds \\ \hline
+    6 x 10 & 6.89 seconds \\ \hline
+    15 x 30 & 7.28 seconds \\ \hline
+    30 x 50 & 9.61 seconds \\ \hline
+    70 x 100 & 13.20 seconds \\ \hline
+    \end{tabular}
+    \caption{A table showing the level size in tiles and the generation times}
+    \label{tab:gentimes}
+    \end{table}
 
 \end{section}
 
