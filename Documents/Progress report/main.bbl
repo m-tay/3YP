@@ -1,5 +1,20 @@
 \begin{thebibliography}{}
 
+\bibitem[Brown, 2016]{gct-spelunky}
+Brown, M. (2016).
+\newblock How (and why) spelunky makes its own levels | game maker's toolkit.
+
+\bibitem[Dormans, 2010]{Dormans:2010:ALD:1814256.1814257}
+Dormans, J. (2010).
+\newblock Adventures in level design: Generating missions and spaces for action
+  adventure games.
+\newblock pages 1:1--1:8.
+
+\bibitem[Ebert and Musgrave, 2003]{ebert2003texturing}
+Ebert, D.~S. and Musgrave, F.~K. (2003).
+\newblock {\em Texturing \& modeling: a procedural approach}.
+\newblock Morgan Kaufmann.
+
 \bibitem[Germer and Schwarz, 2009]{doi:10.1111/j.1467-8659.2009.01351.x}
 Germer, T. and Schwarz, M. (2009).
 \newblock Procedural arrangement of furniture for real-time walkthroughs.
@@ -10,8 +25,22 @@ Hendrikx, M., Meijer, S., Van Der~Velden, J., and Iosup, A. (2013).
 \newblock Procedural content generation for games: A survey.
 \newblock {\em ACM Trans. Multimedia Comput. Commun. Appl.}, 9(1):1:1--1:22.
 
+\bibitem[Perlin, 1985]{Perlin:1985:IS:325165.325247}
+Perlin, K. (1985).
+\newblock An image synthesizer.
+\newblock {\em SIGGRAPH Comput. Graph.}, 19(3):287--296.
+
+\bibitem[Spufford, 2003]{spufford_2003}
+Spufford, F. (2003).
+\newblock {\em Backroom Boys: The Secret Return of the British Boffin}.
+\newblock Faber and Faber.
+
 \bibitem[Taylor and Parberry, 2010]{taylor-parberry}
 Taylor, J. and Parberry, I. (2010).
 \newblock Computerized clutter: How to make a virtual room look lived-in.
+
+\bibitem[Welsh, 2016]{welsh_2016}
+Welsh, O. (2016).
+\newblock No man's sky review (eurogamer.net).
 
 \end{thebibliography}
