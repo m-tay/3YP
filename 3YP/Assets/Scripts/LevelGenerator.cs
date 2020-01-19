@@ -8,7 +8,6 @@ public class LevelGenerator : MonoBehaviour
     bool genCritialPath = true;
     bool genFillerTiles = true;
 
-
     // enum to hold all the types of rooms (directions of entry/exit) that are possible
     public enum roomType{
         All,
@@ -28,17 +27,29 @@ public class LevelGenerator : MonoBehaviour
         Down
     }
 
-    public GameObject[] tiles;          // holds all prefabs of tiles that can be spawned
+    public GameObject[] tilesL;
+    public GameObject[] tilesR;
+    public GameObject[] tilesD;
+    public GameObject[] tilesDD;
+
+    public GameObject helperDD;
+    public GameObject helperD;
+    public GameObject helperL;
+    public GameObject helperR;
+
+
     public GameObject startTile;
     public GameObject[] startpoints;    // holds all the players possible start points
     public GameObject[] fillpoints;     // holds all the fillpoints, to spawn rooms on if empty
     public GameObject player;
+    public GameObject scarecrow;
     public GameObject[] interiors;
     public GameObject endpoint;
 
     private float moveAmount = 27; // how to move spawning position around - size of tile
     private Direction direction;      // direction to move random walk level generator
 
+    int r = 0;
     private int downCount = 0;
     private bool keepGenerating = true; // checks if bottom bound has been reached when generating
 
@@ -47,18 +58,28 @@ public class LevelGenerator : MonoBehaviour
 
     // bounding for the random walk
     private int minX = -0;
-    private int maxX = 135;
+    private int maxX = 130;
     private int minZ = -160;
+
+
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        // pointer to list of all surfaces so navmesh can be baked
+        var surfaces = this.transform.parent.GetComponent<NavMeshBuilder>().surfaces;
+        
+
         int rand = 0;
 
         // init spawn room with BLR room (tiles[3]) at random location
         rand = Random.Range(0, startpoints.Length); // get random position
-        Instantiate(startTile, startpoints[rand].transform.position, Quaternion.identity); // spawn room  
-        player.transform.position = startpoints[rand].transform.position;   // move player
+        var room = Instantiate(startTile, startpoints[rand].transform.position, Quaternion.identity); // spawn room
+        surfaces.Add(room.transform);
+
+        // move player and enemy to starting positions
+        player.transform.position = startpoints[rand].transform.position;
+        
 
         // set first direction for random walk level generation
         direction = getRandDirection();
@@ -79,6 +100,19 @@ public class LevelGenerator : MonoBehaviour
         if(genFillerTiles)
             Fill();
 
+        // build dynamic navmesh
+        this.transform.parent.GetComponent<NavMeshBuilder>().buildNavMesh();
+
+        if(genFillerTiles)
+            AddDoors();
+
+        // move scarecrow to start point
+        Vector3 scarecrowStart = new Vector3(player.transform.position.x + 3, player.transform.position.y, player.transform.position.z);
+        scarecrow.transform.position = scarecrowStart;
+        
+        // add navagent to scarecrow dynamically
+        var sc = scarecrow.GetComponent<ScarecrowController>();
+        sc.startNavAgent(scarecrowStart);
     }
 
     private void Generate() {
@@ -91,9 +125,13 @@ public class LevelGenerator : MonoBehaviour
     }
 
     private void Move() {
+        // points to list that holds all the surfaces, so nav mesh can be baked
+        var surfaces = this.transform.parent.GetComponent<NavMeshBuilder>().surfaces;
+
+
         if(direction == Direction.Right) { // move right
 
-            if(transform.position.x < maxX) { // check for bounding
+            if(transform.position.x < maxX)  {// check for bounding
 
                 // reset downcount
                 downCount = 0;
@@ -109,6 +147,13 @@ public class LevelGenerator : MonoBehaviour
                     direction = getRandDirection();
                 }
 
+                if(transform.position.x + moveAmount + 2 > maxX)  {
+                    direction = Direction.Down; // if reached bound, go down
+                    downCount++;
+                    Debug.Log("Right bound UP NEXT reached, going down");
+                
+                }
+
             }
             else {
                 direction = Direction.Down; // if reached bound, go down
@@ -117,22 +162,33 @@ public class LevelGenerator : MonoBehaviour
             }
 
             // spawn tile at new location - all rooms have R exits so randomise from tiles[]
-            int r = Random.Range(0, tiles.Length);
+            r = Random.Range(0, tilesR.Length);
 
             // check if next direction is going down - must generate room with B opening
-            if(direction == Direction.Down) {
-                while(r != 1 && r != 3) {
-                        r = Random.Range(0, tiles.Length);
-                    }
-            }
+            if(direction == Direction.Down && downCount < 2) {
+                r = Random.Range(0, tilesD.Length);
+                var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
+                surfaces.Add(room.transform);
 
-            // check if gone down twice - always use tiles[3] if so
-            if(direction == Direction.Down && downCount >= 2) {
-                r = 3;
-            }
 
-            Instantiate(tiles[r], transform.position, Quaternion.identity);
-            //Debug.Log("Spawning tile at " + transform.position);
+            }
+            if (direction == Direction.Down && downCount >= 2) {
+                r = Random.Range(0, tilesDD.Length);
+                var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
+                surfaces.Add(room.transform);
+
+                
+
+            }
+            if (direction == Direction.Right) {
+                var room = Instantiate(tilesR[r], transform.position, Quaternion.identity);
+                surfaces.Add(room.transform);
+
+                
+
+
+                //Debug.Log("Spawning tile at " + transform.position);
+            }
 
         }
 
@@ -153,6 +209,12 @@ public class LevelGenerator : MonoBehaviour
                     direction = getRandDirection();
                 }
 
+                if(transform.position.x - moveAmount - 2 < minX)  {
+                    direction = Direction.Down; // if reached bound, go down
+                    downCount++;
+                    Debug.Log("Left bound UP NEXT reached, going down");
+                }
+
             }
             else {
                 direction = Direction.Down;
@@ -162,22 +224,27 @@ public class LevelGenerator : MonoBehaviour
             }
             
             // spawn tile at new location - all rooms have L exits so randomise from tiles[]
-            int r = Random.Range(0, tiles.Length);
+            r = Random.Range(0, tilesL.Length);
 
             // check if next direction is going down - must generate room with B opening
-            if(direction == Direction.Down) {
-                while(r != 1 && r != 3) {
-                        r = Random.Range(0, tiles.Length);
-                    }
-            }
-
-            // check if gone down twice - always use tiles[3] if so
+            if(direction == Direction.Down && downCount < 2) {
+                r = Random.Range(0, tilesD.Length);
+                var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
+                surfaces.Add(room.transform);
+                
+            } 
             if(direction == Direction.Down && downCount >= 2) {
-                r = 3;
+                r = Random.Range(0, tilesDD.Length);
+                var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
+                surfaces.Add(room.transform);
+                
             }
-
-            Instantiate(tiles[r], transform.position, Quaternion.identity);
-            //Debug.Log("Spawning tile at " + transform.position);
+            if(direction == Direction.Left) {
+                var room = Instantiate(tilesL[r], transform.position, Quaternion.identity);
+                surfaces.Add(room.transform);
+                
+                //Debug.Log("Spawning tile at " + transform.position);
+            }
         }
 
         if(direction == Direction.Down ) { // move down
@@ -194,12 +261,18 @@ public class LevelGenerator : MonoBehaviour
 
                 // check if moved down more than once - spawn all 4 opening room
                 if(downCount >= 2) {
-                    Instantiate(tiles[3], transform.position, Quaternion.identity);
+                    r = Random.Range(0, tilesDD.Length);
+                    var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
+                    surfaces.Add(room.transform);
+                    
+
                 }
                 else {
                     // spawn tile at new location
-                    int r = Random.Range(2, 4);
-                    Instantiate(tiles[r], transform.position, Quaternion.identity);
+                    r = Random.Range(0, tilesD.Length);
+                    var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
+                    surfaces.Add(room.transform);
+
                     //Debug.Log("Spawning tile at " + transform.position);
                 }
             }
@@ -231,11 +304,13 @@ public class LevelGenerator : MonoBehaviour
         // for all fillpoints
         for(int i = 0; i < fillpoints.Length; i++) {
             fillpoints[i].GetComponent<RoomAdder>().CheckAndFill();
-            
-            
-            //roomDetector.transform.position = fillpoints[i].transform.position;
-            //roomDetector.GetComponent<RoomAdder>().CheckAndFill();
+        }
+    }
 
+    public void AddDoors() {
+        // for all fillpoints
+        for(int i = 0; i < fillpoints.Length; i++) {
+            fillpoints[i].GetComponent<RoomAdder>().AddDoors();
         }
     }
 
