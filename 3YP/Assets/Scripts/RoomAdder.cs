@@ -79,7 +79,4 @@ public class RoomAdder : MonoBehaviour
 
     }
 
-    public bool validPosition() {
-
-    }
 }
