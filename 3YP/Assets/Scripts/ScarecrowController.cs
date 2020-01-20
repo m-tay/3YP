@@ -6,7 +6,8 @@ public class ScarecrowController : MonoBehaviour
 {
     public enum State {
         Wandering,
-        Chasing
+        Chasing,
+        Stopped
     }
     public GameObject player;
     public State state = State.Chasing;
@@ -15,11 +16,6 @@ public class ScarecrowController : MonoBehaviour
 
     private UnityEngine.AI.NavMeshAgent agent;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void startNavAgent(Vector3 startPoint) {
         UnityEngine.AI.NavMeshHit closestHit;
@@ -59,6 +55,10 @@ public class ScarecrowController : MonoBehaviour
             agent.SetDestination(player.transform.position);
            
         }        
+    }
+
+    public void stop() {
+        state = State.Stopped;
     }
 
 

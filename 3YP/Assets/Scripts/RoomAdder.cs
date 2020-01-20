@@ -19,11 +19,11 @@ public class RoomAdder : MonoBehaviour
 
         // cast a ray up to see if rooms are detected
         if(Physics.Raycast(transform.position, up, 10)) {
-            Debug.Log("ROOM DETECTED AT" + transform.position);
+            //Debug.Log("ROOM DETECTED AT" + transform.position);
         }
         else {
             // if no room detected, spawn a room
-            Debug.Log("ROOM NOT DETECTED AT" + transform.position);
+            //Debug.Log("ROOM NOT DETECTED AT" + transform.position);
             Instantiate(tiles[0], transform.position, Quaternion.identity);
             
         }
