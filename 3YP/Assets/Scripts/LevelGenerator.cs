@@ -66,16 +66,13 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        // pointer to list of all surfaces so navmesh can be baked
-        var surfaces = this.transform.parent.GetComponent<NavMeshBuilder>().surfaces;
-        
+      
 
         int rand = 0;
 
         // init spawn room with BLR room (tiles[3]) at random location
         rand = Random.Range(0, startpoints.Length); // get random position
         var room = Instantiate(startTile, startpoints[rand].transform.position, Quaternion.identity); // spawn room
-        surfaces.Add(room.transform);
 
         // move player and enemy to starting positions
         player.transform.position = startpoints[rand].transform.position;
@@ -125,10 +122,6 @@ public class LevelGenerator : MonoBehaviour
     }
 
     private void Move() {
-        // points to list that holds all the surfaces, so nav mesh can be baked
-        var surfaces = this.transform.parent.GetComponent<NavMeshBuilder>().surfaces;
-
-
         if(direction == Direction.Right) { // move right
 
             if(transform.position.x < maxX)  {// check for bounding
@@ -168,21 +161,21 @@ public class LevelGenerator : MonoBehaviour
             if(direction == Direction.Down && downCount < 2) {
                 r = Random.Range(0, tilesD.Length);
                 var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
 
 
             }
             if (direction == Direction.Down && downCount >= 2) {
                 r = Random.Range(0, tilesDD.Length);
                 var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
 
                 
 
             }
             if (direction == Direction.Right) {
                 var room = Instantiate(tilesR[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
 
                 
 
@@ -230,18 +223,18 @@ public class LevelGenerator : MonoBehaviour
             if(direction == Direction.Down && downCount < 2) {
                 r = Random.Range(0, tilesD.Length);
                 var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
                 
             } 
             if(direction == Direction.Down && downCount >= 2) {
                 r = Random.Range(0, tilesDD.Length);
                 var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
                 
             }
             if(direction == Direction.Left) {
                 var room = Instantiate(tilesL[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
                 
                 //Debug.Log("Spawning tile at " + transform.position);
             }
@@ -263,7 +256,7 @@ public class LevelGenerator : MonoBehaviour
                 if(downCount >= 2) {
                     r = Random.Range(0, tilesDD.Length);
                     var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
-                    surfaces.Add(room.transform);
+
                     
 
                 }
@@ -271,7 +264,7 @@ public class LevelGenerator : MonoBehaviour
                     // spawn tile at new location
                     r = Random.Range(0, tilesD.Length);
                     var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
-                    surfaces.Add(room.transform);
+
 
                     //Debug.Log("Spawning tile at " + transform.position);
                 }

@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &934351628889371964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3634017367707518673}
+  m_Layer: 13
+  m_Name: Walls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3634017367707518673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934351628889371964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.258631, y: -4.360386, z: -3.5074387}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7917838908416530071}
+  - {fileID: 8753034711240259055}
+  - {fileID: 8267548518800157770}
+  - {fileID: 8978646161072822450}
+  - {fileID: 4663497019226148071}
+  - {fileID: 3666924073166768001}
+  - {fileID: 2121083181755271060}
+  - {fileID: 6663447598983609754}
+  - {fileID: 7726379466121660713}
+  - {fileID: 7253959561983433766}
+  - {fileID: 8240905230878123044}
+  - {fileID: 1026331291204936896}
+  - {fileID: 4439787929656408024}
+  - {fileID: 2596464382830568302}
+  - {fileID: 3199805499297822420}
+  - {fileID: 1263244334583320856}
+  - {fileID: 7543990143175511415}
+  - {fileID: 8822558865939462549}
+  - {fileID: 197399837044891185}
+  - {fileID: 7357077903584929034}
+  - {fileID: 6758557262500576009}
+  - {fileID: 3608003518697609722}
+  - {fileID: 1530028595558840937}
+  - {fileID: 1479452461126265564}
+  - {fileID: 4784950492527689758}
+  - {fileID: 1160363325683665908}
+  - {fileID: 7747467680434722162}
+  - {fileID: 8906539198244828616}
+  - {fileID: 1122759507773923717}
+  - {fileID: 8380552134385690533}
+  - {fileID: 4021795579727129825}
+  - {fileID: 6986503116545470135}
+  m_Father: {fileID: 3210225585143996200}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8113117221448946415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +184,7 @@ Transform:
   - {fileID: 4144573078708222413}
   - {fileID: 7184527722870592180}
   m_Father: {fileID: 3210225585143996200}
-  m_RootOrder: 36
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6551593339144974656
 MonoBehaviour:
@@ -164,38 +226,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7917838908416530071}
-  - {fileID: 8753034711240259055}
-  - {fileID: 8267548518800157770}
-  - {fileID: 8978646161072822450}
-  - {fileID: 4663497019226148071}
-  - {fileID: 3666924073166768001}
-  - {fileID: 2121083181755271060}
-  - {fileID: 6663447598983609754}
-  - {fileID: 7726379466121660713}
-  - {fileID: 7253959561983433766}
-  - {fileID: 8240905230878123044}
-  - {fileID: 1026331291204936896}
-  - {fileID: 4439787929656408024}
-  - {fileID: 2596464382830568302}
-  - {fileID: 3199805499297822420}
-  - {fileID: 1263244334583320856}
-  - {fileID: 7543990143175511415}
-  - {fileID: 8822558865939462549}
-  - {fileID: 197399837044891185}
-  - {fileID: 7357077903584929034}
-  - {fileID: 6758557262500576009}
-  - {fileID: 3608003518697609722}
-  - {fileID: 1530028595558840937}
-  - {fileID: 1479452461126265564}
-  - {fileID: 4784950492527689758}
-  - {fileID: 1160363325683665908}
-  - {fileID: 7747467680434722162}
-  - {fileID: 8906539198244828616}
-  - {fileID: 1122759507773923717}
-  - {fileID: 8380552134385690533}
-  - {fileID: 4021795579727129825}
-  - {fileID: 6986503116545470135}
   - {fileID: 4736176693714047016}
   - {fileID: 3365125370132190355}
   - {fileID: 1668518171539399484}
@@ -205,6 +235,7 @@ Transform:
   - {fileID: 2510335966473921999}
   - {fileID: 7860027999579595077}
   - {fileID: 8108383513812496033}
+  - {fileID: 3634017367707518673}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -453,27 +484,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.5
+      value: 14.007439
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -514,6 +550,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -688,27 +734,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5000005
+      value: 17.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.500003
+      value: 17.007442
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -749,6 +800,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -843,27 +904,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.5
+      value: 14.007439
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -904,6 +970,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -963,7 +1039,7 @@ PrefabInstance:
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
@@ -1073,27 +1149,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.5
+      value: -0.99256134
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -1134,6 +1215,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -1388,27 +1479,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.5
+      value: -6.9925613
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -1449,6 +1545,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -1623,27 +1729,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: 5.7586308
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.500011
+      value: -9.992573
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -1684,6 +1795,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -1778,27 +1899,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.5
+      value: 11.007439
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -1839,6 +1965,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -2013,27 +2149,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5
+      value: 5.0074387
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -2074,6 +2215,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -2168,27 +2319,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4999995
+      value: 11.758631
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.500009
+      value: -9.99257
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -2230,6 +2386,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
 --- !u!4 &7726379466121660713 stripped
@@ -2243,27 +2409,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.5
+      value: 11.007439
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -2305,6 +2476,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
 --- !u!4 &7747467680434722162 stripped
@@ -2318,27 +2499,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4999995
+      value: 11.758631
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.5
+      value: 17.007439
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -2379,6 +2565,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -2553,27 +2749,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.499998
+      value: 2.7586327
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.499995
+      value: 17.007435
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -2614,6 +2815,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -2708,27 +2919,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5000005
+      value: 17.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.500006
+      value: -9.992567
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -2769,6 +2985,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -2863,27 +3089,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.5
+      value: -9.992561
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -2924,6 +3155,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -3178,27 +3419,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.5
+      value: -9.992561
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -3239,6 +3485,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -3333,27 +3589,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: 8.758631
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.499998
+      value: 17.007437
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -3394,6 +3655,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -4018,7 +4289,7 @@ PrefabInstance:
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
@@ -4037,15 +4308,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cedd27adf1016de4db91adbf73def3df, type: 3}
---- !u!4 &7675842562161125973 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
-    type: 3}
-  m_PrefabInstance: {fileID: 2944176112742606707}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3201098932579453348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 339817363693203159, guid: cedd27adf1016de4db91adbf73def3df,
+    type: 3}
+  m_PrefabInstance: {fileID: 2944176112742606707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7675842562161125973 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
     type: 3}
   m_PrefabInstance: {fileID: 2944176112742606707}
   m_PrefabAsset: {fileID: 0}
@@ -4419,7 +4690,7 @@ PrefabInstance:
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
@@ -4734,7 +5005,7 @@ PrefabInstance:
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
@@ -5244,27 +5515,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5
+      value: 5.0074387
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -5306,6 +5582,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
 --- !u!4 &4784950492527689758 stripped
@@ -5319,27 +5605,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.5
+      value: 8.007439
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -5380,6 +5671,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -5519,7 +5820,7 @@ PrefabInstance:
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
@@ -5629,27 +5930,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.5
+      value: 8.758631
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.5000105
+      value: -9.992572
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -5690,6 +5996,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -6184,27 +6500,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.5
+      value: -3.9925613
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -6245,6 +6566,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -6419,27 +6750,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.500002
+      value: 23.758633
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.500007
+      value: 17.007446
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -6481,6 +6817,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
 --- !u!4 &3608003518697609722 stripped
@@ -6494,27 +6840,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.5
+      value: -6.9925613
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -6555,6 +6906,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -6969,27 +7330,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 20.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.500004
+      value: -9.992565
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -7030,6 +7396,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -7524,27 +7900,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.500002
+      value: 23.758633
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.500002
+      value: -9.992563
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -7585,6 +7966,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -7724,7 +8115,7 @@ PrefabInstance:
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
         type: 3}
@@ -7743,15 +8134,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cedd27adf1016de4db91adbf73def3df, type: 3}
---- !u!1 &7222654372069983806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 339817363693203159, guid: cedd27adf1016de4db91adbf73def3df,
-    type: 3}
-  m_PrefabInstance: {fileID: 6956728772537493737}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2510335966473921999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4782192470727757094, guid: cedd27adf1016de4db91adbf73def3df,
+    type: 3}
+  m_PrefabInstance: {fileID: 6956728772537493737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7222654372069983806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 339817363693203159, guid: cedd27adf1016de4db91adbf73def3df,
     type: 3}
   m_PrefabInstance: {fileID: 6956728772537493737}
   m_PrefabAsset: {fileID: 0}
@@ -7840,27 +8231,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.5
+      value: -0.24136925
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.5
+      value: -3.9925613
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -7901,6 +8297,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -8120,7 +8526,7 @@ PrefabInstance:
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
@@ -8150,27 +8556,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.500009
+      value: 17.007446
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -8212,6 +8623,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
 --- !u!4 &1479452461126265564 stripped
@@ -8225,27 +8646,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 20.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.500005
+      value: 17.007442
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -8286,6 +8712,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -8700,27 +9136,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.5
+      value: -0.99256134
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -8761,6 +9202,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -8935,27 +9386,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.5
+      value: -9.992561
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -8997,6 +9453,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
 --- !u!4 &1263244334583320856 stripped
@@ -9010,27 +9476,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.499998
+      value: 2.7586327
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.500013
+      value: -9.992575
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -9072,6 +9543,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
 --- !u!4 &1026331291204936896 stripped
@@ -9085,27 +9566,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.5
+      value: 26.75863
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.5
+      value: 8.007439
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -9146,6 +9632,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}
@@ -9205,7 +9701,7 @@ PrefabInstance:
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2942068058149048893, guid: 59d6437fc1b95f247ad1fe44404fdae3,
         type: 3}
@@ -9555,27 +10051,32 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3210225585143996200}
+    m_TransformParent: {fileID: 3634017367707518673}
     m_Modifications:
     - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_Name
       value: Classic_Wall_Snaps001 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382203, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5
+      value: 5.7586308
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.360386
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.499997
+      value: 17.007435
       objectReference: {fileID: 0}
     - target: {fileID: 9104960090691286939, guid: 6c1e8509009cb9f4e852725ca9d37655,
         type: 3}
@@ -9616,6 +10117,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382207, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104960090691382201, guid: 6c1e8509009cb9f4e852725ca9d37655,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e8509009cb9f4e852725ca9d37655, type: 3}

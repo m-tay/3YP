@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerLevelController : MonoBehaviour
 {
+    // store reference to level generator script
+    public GameObject LevelGenerator;
+    private NavMeshBuilder navMeshBuilder;
+
     public int timeBeforeStartingLevelChanges;
     public int changeLevelEvery;
 
@@ -14,6 +18,7 @@ public class PlayerLevelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        navMeshBuilder = LevelGenerator.GetComponent<NavMeshBuilder>();
         InvokeRepeating("CheckBehind", timeBeforeStartingLevelChanges, changeLevelEvery);
     }
 
@@ -26,9 +31,18 @@ public class PlayerLevelController : MonoBehaviour
 
             // ensure player is out of the room before triggering a regen
             if(hit.distance > 10) {
-
+            
+            // regenerate point
             hit.collider.GetComponent<ReGenerator>().regenPoint();
+
+            // rebuild nav mesh whenever level is changed
+            //navMeshBuilder.buildNavMesh();
+
+            Debug.Log("REGEN OCCURRED");
+
+
             }
+            
         }
 
 

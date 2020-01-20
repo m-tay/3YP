@@ -142,38 +142,45 @@ public class RoomAdder : MonoBehaviour
         
         // delete the wall and replace with the one next to it if not valid
         if(counter < 4) {
+            // tile edge walls are on layer 13
+            int wallLayer = 1 << 13;
+
+            // create new point to raycast from, close to ceiling and near doorframe, to get doorframe tile
             Vector3 checkPos = new Vector3((pos.position.x - 0.5f), 2.9f, (pos.position.z - 0.5f));
             
+            // debut rays
             Debug.DrawRay(checkPos, Vector3.forward, Color.green, 1000000000, false);
             Debug.DrawRay(checkPos, Vector3.right, Color.yellow, 1000000000, false);
 
-            if((Physics.Raycast(checkPos, Vector3.forward, out hit, 1)) || (Physics.Raycast(checkPos, Vector3.right, out hit, 1))) {
-                // get hit object                
+            // check for wall layer stuff
+            if((Physics.Raycast(checkPos, Vector3.forward, out hit, 1)) || (Physics.Raycast(checkPos, Vector3.right, out hit, 1))) {                // get hit object                
+                // get reference to hit object
                 GameObject obj = hit.transform.gameObject;
-                //Debug.Log("WALL DETECTION: " + obj);
 
                 // save position of wall
-                Transform wallPos = obj.transform;
-                Debug.Log("Wall destroyed at " + wallPos.position);
+                Vector3 wallPosition = obj.transform.position;
+                wallPosition = new Vector3(wallPosition.x, wallPosition.y, wallPosition.z);
 
-                // destroy doorframe
-                Destroy(obj);
-
+                
                 // get wall to left
                 Vector3 wallNborPos = new Vector3(pos.position.x, 1.0f, pos.position.z);
 
-                if(Physics.Raycast(wallNborPos, Vector3.left, out hit, 3)) {
-                    Debug.Log("CLONING" + hit.transform.gameObject + "AT " + wallPos.position);
-                    
-                    GameObject newWall = Instantiate(hit.transform.gameObject, wallPos);
-                    Debug.Log("New wall is " + newWall);
+                // copy neighbour 
+                if(Physics.Raycast(wallNborPos, Vector3.left, out hit, 3, wallLayer)) {
+                    Quaternion wallRotation = Quaternion.Euler(0, 90, 0);                     
+                    GameObject newWall = Instantiate(hit.transform.gameObject, wallPosition, wallRotation);
+                }
+
+                if(Physics.Raycast(wallNborPos, Vector3.forward, out hit, 3, wallLayer)) {
+                    Quaternion wallRotation = Quaternion.Euler(0, 0, 0);                     
+                    GameObject newWall = Instantiate(hit.transform.gameObject, wallPosition, wallRotation);
                 }
 
 
 
+                // destroy doorframe
+                Destroy(obj);
 
-
-                
             }
             
             return false;

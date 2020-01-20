@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class NavMeshBuilder : MonoBehaviour
 {
-    public List<Transform> surfaces;
-
     public NavMeshSurface navMeshSurface;
 
     public void buildNavMesh() {

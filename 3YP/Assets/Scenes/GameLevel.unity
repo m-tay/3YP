@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -621,7 +621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c826bba2dcfa7cd429e8bd857f6c14fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surfaces: []
   navMeshSurface: {fileID: 204357510}
 --- !u!114 &204357510
 MonoBehaviour:
@@ -4707,6 +4706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23b0c8e0c8c7a941a0f9c73ef869d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelGenerator: {fileID: 204357507}
   timeBeforeStartingLevelChanges: 3
   changeLevelEvery: 1
 --- !u!1 &1990200130
