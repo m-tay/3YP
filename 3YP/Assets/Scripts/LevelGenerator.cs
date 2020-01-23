@@ -37,14 +37,15 @@ public class LevelGenerator : MonoBehaviour
     public GameObject helperL;
     public GameObject helperR;
 
-
     public GameObject startTile;
     public GameObject[] startpoints;    // holds all the players possible start points
     public GameObject[] fillpoints;     // holds all the fillpoints, to spawn rooms on if empty
     public GameObject player;
     public GameObject scarecrow;
     public GameObject[] interiors;
+    public GameObject endtile;
     public GameObject endpoint;
+
 
     private float moveAmount = 27; // how to move spawning position around - size of tile
     private Direction direction;      // direction to move random walk level generator
@@ -273,8 +274,17 @@ public class LevelGenerator : MonoBehaviour
                 // bottom bound reached, so stop generating
                 keepGenerating = false;
 
-                // move level endpoint to this tile
-                endpoint.transform.position = transform.position;
+                // move down a tile to place exit
+                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
+                transform.position = newPos;
+                
+                // move level endtile to this tile
+                var room = Instantiate(endtile, transform.position, Quaternion.identity);
+
+                // move level endpoint (the collision triggers the win condition) to doorway of end room
+                newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 12);
+                endpoint.transform.position = newPos;
+
             }
 
             // generate next move, can go any direction

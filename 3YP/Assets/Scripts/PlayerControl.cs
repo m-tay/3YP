@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour {
 
+    public LevelLoader levelLoader;
+
     public float speed = 10.0f;
     private float translation;
     private float strafe;
@@ -72,8 +74,13 @@ public class PlayerControl : MonoBehaviour {
     void OnCollisionEnter(Collision col) {
         
         if(col.gameObject.name == "EndPoint") {
+
             Debug.Log("EndPoint collision!");
-            SceneManager.LoadScene("WinScreen");
-        }
+
+            // transition to gameover screen
+            levelLoader.GetComponent<LevelLoader>().loadGameWinScreen();
+
+
+            }
     }
 }
