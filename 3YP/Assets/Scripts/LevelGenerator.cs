@@ -42,9 +42,11 @@ public class LevelGenerator : MonoBehaviour
     public GameObject[] fillpoints;     // holds all the fillpoints, to spawn rooms on if empty
     public GameObject player;
     public GameObject scarecrow;
+    Vector3 scarecrowStart;
     public GameObject[] interiors;
     public GameObject endtile;
     public GameObject endpoint;
+    
 
 
     private float moveAmount = 27; // how to move spawning position around - size of tile
@@ -105,8 +107,8 @@ public class LevelGenerator : MonoBehaviour
             AddDoors();
 
         // move scarecrow to start point
-        Vector3 scarecrowStart = new Vector3(player.transform.position.x + 3, player.transform.position.y, player.transform.position.z);
-        scarecrow.transform.position = scarecrowStart;
+        //Vector3 scarecrowStart = new Vector3(player.transform.position.x + 3, player.transform.position.y, player.transform.position.z);
+        //scarecrow.transform.position = scarecrowStart;
         
         // add navagent to scarecrow dynamically
         var sc = scarecrow.GetComponent<ScarecrowController>();
@@ -284,6 +286,11 @@ public class LevelGenerator : MonoBehaviour
                 // move level endpoint (the collision triggers the win condition) to doorway of end room
                 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 12);
                 endpoint.transform.position = newPos;
+
+                // move scarecrow to end point
+                scarecrowStart = new Vector3(newPos.x, newPos.y, newPos.z + 3);
+                scarecrow.transform.position = scarecrowStart;
+
 
             }
 

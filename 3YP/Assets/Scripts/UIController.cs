@@ -6,25 +6,54 @@ public class UIController : MonoBehaviour
 {
 	public Transform endpoint;
     public Transform player;
-	public int compassImprecision = 10;
 
-	float angle;
+	Light torch;
 
+	float newIntensity;
+
+	public float torchIntensityMin = 1;
+	public float torchIntensityMax = 10;
+
+	public float torchRangeMin = 30;
+	public float torchRangeMax = 70;
+
+
+	float angleToExit;
 
 	float deltaTime = 0.0f;
-	int playerRotImprecise;
-	float playerAngle;
  
+	void Start() {
+		torch = GameObject.Find("PlayerTorch").GetComponent<Light>();
+	}
+	
 	void Update()
 	{
 		// update deltatime
 		deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
 
-		angle = Vector3.Angle(player.transform.forward, -endpoint.transform.forward);
+		// calculate player's angle to the exit
+		angleToExit = Vector3.Angle(player.transform.forward, -endpoint.transform.forward);
+
+		// get ratio of angle in angle range to get normal
+		float normal = Mathf.InverseLerp(0, 180, angleToExit);
+
+		// invert normal because you want to go from low angles to high torch values
+		float invertNormal = 1 - normal;
+
+		// calculate new intensity
+		newIntensity = Mathf.Lerp(torchIntensityMin, torchIntensityMax, invertNormal);
 		
-		
+		// apply new intensity to torch
+		torch.intensity = newIntensity;	
+
+		// calculate new range
+		float newRange = Mathf.Lerp(torchRangeMin, torchRangeMax, invertNormal);
+		torch.range = newRange;
+	
 
 	}
+
+
  
 	void OnGUI()
 	{
@@ -47,7 +76,15 @@ public class UIController : MonoBehaviour
 		style.alignment = TextAnchor.UpperLeft;
 		style.fontSize = h * 2 / 100;
 		style.normal.textColor = new Color (1.0f, 0.92f, 0.016f, 1.0f);
-		text = string.Format("Angle to end: {0} degrees", playerAngle);
+		text = string.Format("Angle to end: {0} degrees", angleToExit);
+		GUI.Label(rect, text, style);
+
+		// torch intensity display
+		rect = new Rect(0, 30, w, h * 2 / 75);
+		style.alignment = TextAnchor.UpperLeft;
+		style.fontSize = h * 2 / 100;
+		style.normal.textColor = new Color (1.0f, 0.92f, 0.016f, 1.0f);
+		text = string.Format("Torch intensity: {0}", newIntensity);
 		GUI.Label(rect, text, style);
 
 

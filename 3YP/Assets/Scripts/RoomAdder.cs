@@ -10,7 +10,9 @@ public class RoomAdder : MonoBehaviour
     public GameObject[] interiors;
     public GameObject[] doors;
 
-    public GameObject target; 
+    public int percDoorWillSpawn = 50;
+
+    private GameObject target; 
 
     public void CheckAndFill() {
 
@@ -52,7 +54,7 @@ public class RoomAdder : MonoBehaviour
         if(Physics.Raycast(transform.position, Vector3.forward, out hit, 20, layermask)) {
             target = hit.transform.gameObject;
 
-            if(validDoorPosition(target.transform)) {                
+            if(validDoorPosition(target.transform) && Random.Range(0, 100) < percDoorWillSpawn) {                
                 Instantiate(doors[0], target.transform.position, Quaternion.identity, target.transform);
                 target.layer = 12;
             }
@@ -62,7 +64,7 @@ public class RoomAdder : MonoBehaviour
         if(Physics.Raycast(transform.position, Vector3.back, out hit, 20, layermask)) {
             target = hit.transform.gameObject;
 
-            if(validDoorPosition(target.transform)) {
+            if(validDoorPosition(target.transform) && Random.Range(0, 100) < percDoorWillSpawn) {
                 Instantiate(doors[0], target.transform.position, Quaternion.identity, target.transform);
                 target.layer = 12;
             }
@@ -73,7 +75,7 @@ public class RoomAdder : MonoBehaviour
         if(Physics.Raycast(transform.position, Vector3.left, out hit, 20, layermask)) {
             target = hit.transform.gameObject;
 
-            if(validDoorPosition(target.transform)) {
+            if(validDoorPosition(target.transform) && Random.Range(0, 100) < percDoorWillSpawn) {
                 Instantiate(doors[0], target.transform.position, Quaternion.identity * rotation, target.transform);
                 target.layer = 12;
             }
@@ -83,7 +85,7 @@ public class RoomAdder : MonoBehaviour
         if(Physics.Raycast(transform.position, Vector3.right, out hit, 20, layermask)) {
             target = hit.transform.gameObject;
 
-            if(validDoorPosition(target.transform)) {
+            if(validDoorPosition(target.transform) && Random.Range(0, 100) < percDoorWillSpawn) {
 
                 Instantiate(doors[0], target.transform.position, Quaternion.identity * rotation, target.transform);
                 target.layer = 12;
