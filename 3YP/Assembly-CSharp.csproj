@@ -53,12 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AssetStoreOriginals\SnapsArtOffice\Scripts\LightmappedLOD.cs" />
-     <Compile Include="Assets\AssetStoreOriginals\SnapsArtOffice\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\DoorOpener.cs" />
-     <Compile Include="Assets\Scripts\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+     <Compile Include="Assets\Scripts\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\MouseCamLook.cs" />
      <Compile Include="Assets\Scripts\NavMeshBuilder.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
@@ -67,7 +65,10 @@
      <Compile Include="Assets\Scripts\ReGenerator.cs" />
      <Compile Include="Assets\Scripts\RoomAdder.cs" />
      <Compile Include="Assets\Scripts\ScarecrowController.cs" />
+     <Compile Include="Assets\Scripts\Scripts\LightmappedLOD.cs" />
+     <Compile Include="Assets\Scripts\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\TitleScreen\MainMenuHandler.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
      <None Include="Assets\AssetStoreOriginals\SnapsArtOffice\Art\UnityHDRI\Gareoult\Info.txt" />
      <None Include="Assets\AssetStoreOriginals\SnapsArtOffice\Art\UnityHDRI\KirbyCove\Info.txt" />
      <None Include="Assets\AssetStoreOriginals\SnapsArtOffice\Art\UnityHDRI\Seaside\Info.txt" />

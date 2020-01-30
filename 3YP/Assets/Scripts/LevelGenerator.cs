@@ -37,14 +37,17 @@ public class LevelGenerator : MonoBehaviour
     public GameObject helperL;
     public GameObject helperR;
 
-
     public GameObject startTile;
     public GameObject[] startpoints;    // holds all the players possible start points
     public GameObject[] fillpoints;     // holds all the fillpoints, to spawn rooms on if empty
     public GameObject player;
     public GameObject scarecrow;
+    Vector3 scarecrowStart;
     public GameObject[] interiors;
+    public GameObject endtile;
     public GameObject endpoint;
+    
+
 
     private float moveAmount = 27; // how to move spawning position around - size of tile
     private Direction direction;      // direction to move random walk level generator
@@ -66,16 +69,13 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        // pointer to list of all surfaces so navmesh can be baked
-        var surfaces = this.transform.parent.GetComponent<NavMeshBuilder>().surfaces;
-        
+      
 
         int rand = 0;
 
         // init spawn room with BLR room (tiles[3]) at random location
         rand = Random.Range(0, startpoints.Length); // get random position
         var room = Instantiate(startTile, startpoints[rand].transform.position, Quaternion.identity); // spawn room
-        surfaces.Add(room.transform);
 
         // move player and enemy to starting positions
         player.transform.position = startpoints[rand].transform.position;
@@ -107,8 +107,8 @@ public class LevelGenerator : MonoBehaviour
             AddDoors();
 
         // move scarecrow to start point
-        Vector3 scarecrowStart = new Vector3(player.transform.position.x + 3, player.transform.position.y, player.transform.position.z);
-        scarecrow.transform.position = scarecrowStart;
+        //Vector3 scarecrowStart = new Vector3(player.transform.position.x + 3, player.transform.position.y, player.transform.position.z);
+        //scarecrow.transform.position = scarecrowStart;
         
         // add navagent to scarecrow dynamically
         var sc = scarecrow.GetComponent<ScarecrowController>();
@@ -125,10 +125,6 @@ public class LevelGenerator : MonoBehaviour
     }
 
     private void Move() {
-        // points to list that holds all the surfaces, so nav mesh can be baked
-        var surfaces = this.transform.parent.GetComponent<NavMeshBuilder>().surfaces;
-
-
         if(direction == Direction.Right) { // move right
 
             if(transform.position.x < maxX)  {// check for bounding
@@ -168,21 +164,21 @@ public class LevelGenerator : MonoBehaviour
             if(direction == Direction.Down && downCount < 2) {
                 r = Random.Range(0, tilesD.Length);
                 var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
 
 
             }
             if (direction == Direction.Down && downCount >= 2) {
                 r = Random.Range(0, tilesDD.Length);
                 var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
 
                 
 
             }
             if (direction == Direction.Right) {
                 var room = Instantiate(tilesR[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
 
                 
 
@@ -230,18 +226,18 @@ public class LevelGenerator : MonoBehaviour
             if(direction == Direction.Down && downCount < 2) {
                 r = Random.Range(0, tilesD.Length);
                 var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
                 
             } 
             if(direction == Direction.Down && downCount >= 2) {
                 r = Random.Range(0, tilesDD.Length);
                 var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
                 
             }
             if(direction == Direction.Left) {
                 var room = Instantiate(tilesL[r], transform.position, Quaternion.identity);
-                surfaces.Add(room.transform);
+
                 
                 //Debug.Log("Spawning tile at " + transform.position);
             }
@@ -263,7 +259,7 @@ public class LevelGenerator : MonoBehaviour
                 if(downCount >= 2) {
                     r = Random.Range(0, tilesDD.Length);
                     var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
-                    surfaces.Add(room.transform);
+
                     
 
                 }
@@ -271,7 +267,7 @@ public class LevelGenerator : MonoBehaviour
                     // spawn tile at new location
                     r = Random.Range(0, tilesD.Length);
                     var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
-                    surfaces.Add(room.transform);
+
 
                     //Debug.Log("Spawning tile at " + transform.position);
                 }
@@ -280,8 +276,22 @@ public class LevelGenerator : MonoBehaviour
                 // bottom bound reached, so stop generating
                 keepGenerating = false;
 
-                // move level endpoint to this tile
-                endpoint.transform.position = transform.position;
+                // move down a tile to place exit
+                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
+                transform.position = newPos;
+                
+                // move level endtile to this tile
+                var room = Instantiate(endtile, transform.position, Quaternion.identity);
+
+                // move level endpoint (the collision triggers the win condition) to doorway of end room
+                newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 12);
+                endpoint.transform.position = newPos;
+
+                // move scarecrow to end point
+                scarecrowStart = new Vector3(newPos.x, newPos.y, newPos.z + 3);
+                scarecrow.transform.position = scarecrowStart;
+
+
             }
 
             // generate next move, can go any direction

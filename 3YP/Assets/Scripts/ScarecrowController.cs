@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class ScarecrowController : MonoBehaviour
 {
+    private Animator anim;
+    public LevelLoader levelLoader;
+
+    private bool attackTimerRunning = false;
+    private float attackTimer = 0f;
+    private float attackFinishedTime = 2.35f;
+
     public enum State {
         Wandering,
         Chasing,
@@ -14,11 +21,26 @@ public class ScarecrowController : MonoBehaviour
     public float rotationSpeed = 1.0f;
     public float moveSpeed = 0.5f;
 
+
+
     private UnityEngine.AI.NavMeshAgent agent;
 
+    void Start() {
+        anim = GetComponent<Animator>();
+        GetComponent<LevelLoader>();
+        
+        // start animation walking sequence
+        anim.SetBool("isWalking", true);
+
+
+    }
 
     public void startNavAgent(Vector3 startPoint) {
+
+        // detect closest hit point
         UnityEngine.AI.NavMeshHit closestHit;
+
+        // check there is a closest hit, start navagent there
         if( UnityEngine.AI.NavMesh.SamplePosition(startPoint, out closestHit, 500, 1 ) ){
             transform.position = closestHit.position;
             gameObject.AddComponent<UnityEngine.AI.NavMeshAgent>();
@@ -52,9 +74,55 @@ public class ScarecrowController : MonoBehaviour
             //transform.position += transform.forward * moveSpeed * Time.deltaTime;
 
             // move towards player (using navmesh)
-            agent.SetDestination(player.transform.position);
-           
-        }        
+            agent.SetDestination(player.transform.position);           
+        }   
+
+        // update attack timer if it's running
+        if(attackTimerRunning)
+            attackTimer += Time.deltaTime;     
+
+    }
+
+    // check for things entering trigger (player only currently)
+    void OnTriggerEnter(Collider other) {
+
+        // if player has entered trigger
+        if(other.gameObject.CompareTag("Player")) {
+            // debug
+            Debug.Log("Player is in Scarecrow trigger!");
+            
+            // start animation
+            anim.SetBool("isAttacking", true);
+            
+            // start timer
+            if (!attackTimerRunning)
+                attackTimerRunning = true;
+
+        }
+    }
+
+    void OnTriggerStay(Collider other) {
+        // if player has stayed in trigger
+        if(other.gameObject.CompareTag("Player")) {
+            if(attackTimer >= attackFinishedTime) {
+                Debug.Log("PLAYER KILLED!!!!!!!!!!!!!!!!!!!");
+                
+                // transition to gameover screen
+                levelLoader.GetComponent<LevelLoader>().loadGameOverScreen();
+            }
+
+        }
+    }
+
+    void OnTriggerExit(Collider other) {
+        // if player has exited the trigger
+        if(other.gameObject.CompareTag("Player")) {
+            // reset attack timer            
+            attackTimerRunning = false;
+            attackTimer = 0.0f;
+
+        }
+
     }
 
     public void stop() {
