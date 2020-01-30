@@ -1,0 +1,138 @@
+%
+% 10/07/15 Pierre Chardaire
+%
+%
+% supervisor's name
+%
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{geometry}
+\RequirePackage{calc}
+
+
+\newcommand*{\moduleCode}[1]{\renewcommand*{\@moduleCode}{#1}}
+\newcommand*{\@moduleCode}{\PackageError{cmpmarksheet}{No module code given}{}}
+
+\newcommand*{\assignmentTitle}[1]{\renewcommand*{\@assignmentTitle}{#1}}
+\newcommand*{\@assignmentTitle}{\PackageError{cmpmarksheet}{No assignment title given}{}}
+
+\newcommand*{\dateSet}[1]{\renewcommand*{\@dateSet}{#1}}
+\newcommand*{\@dateSet}{\PackageError{cmpmarksheet}{No date set given}{}}
+
+\newcommand*{\submissionDateTime}[1]{\renewcommand*{\@submissionDateTime}{#1}}
+\newcommand*{\@submissionDateTime}{\PackageError{cmpmarksheet}{No submission date and time given}{}}
+
+\newcommand*{\returnDate}[1]{\renewcommand*{\@returnDate}{#1}}
+\newcommand*{\@returnDate}{\PackageError{cmpmarksheet}{No return date given}{}}
+
+\newcommand*{\assignmentValue}[1]{\renewcommand*{\@assignmentValue}{#1}}
+\newcommand*{\@assignmentValue}{\PackageError{cmpmarksheet}{No assignment value given}{}}
+
+\newcommand*{\setter}[1]{\renewcommand*{\@setter}{#1}}
+\newcommand*{\@setter}{\PackageError{cmpmarksheet}{No setter given}{}}
+
+\newcommand*{\checker}[1]{\renewcommand*{\@checker}{#1}}
+\newcommand*{\@checker}{\PackageError{cmpmarksheet}{No checker given}{}}
+
+\newcommand{\aim}[1]{\renewcommand{\@aim}{#1}}
+\newcommand{\@aim}{\ClassError{cmpfinalreport}{No aim given}{}}
+
+\newcommand{\learningOutcomes}[1]{\renewcommand{\@learningOutcomes}{#1}}
+\newcommand{\@learningOutcomes}{\ClassError{cmpfinalreport}{No learning outcomes given}{}}
+
+\newcommand{\assessmentCriteria}[1]{\renewcommand{\@assessmentCriteria}{#1}}
+\newcommand{\@assessmentCriteria}{\ClassError{cmpfinalreport}{No assessment criteria given}{}}
+
+\newcommand{\desriptionAssignment}[1]{\renewcommand{\@desriptionAssignment}{#1}}
+\newcommand{\@desriptionAssignment}{\ClassError{cmpfinalreport}{No description of assignment given}{}}
+
+\newcommand{\required}[1]{\renewcommand{\@required}{#1}}
+\newcommand{\@required}{\ClassError{cmpfinalreport}{No requirement given}{}}
+
+\global\let\@handIn\@empty
+\newcommand{\handIn}[1]{\renewcommand{\@handIn}{#1}}
+
+\global\let\@mesec\@empty
+\newcommand{\mesec}[1]{\renewcommand{\@mesec}{#1}}
+
+\global\let\@mesubsec\@empty
+\newcommand{\mesubsec}[1]{\renewcommand{\@mesubsec}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\header}{
+	\let\mylength\relax
+	\newlength{\mylength}
+	\settowidth{\mylength}{DATE \& TIME OF SUBMISSION~}
+
+	\let\setterlength\relax
+	\newlength{\setterlength}
+	\settowidth{\setterlength}{\@setter}
+	
+	\let\checkerlength\relax		
+	\newlength{\checkerlength}
+	\settowidth{\checkerlength}{\@checker}
+
+	\let\maxsetterchecker\relax
+	\newlength{\maxsetterchecker}
+	\setlength{\maxsetterchecker}{\maxof{\setterlength}{\checkerlength}}
+	\addtolength{\maxsetterchecker}{2em}
+	
+	\noindent{}\textbf{COURSEWORK ASSIGNMENT}\hfill{}\textbf{UNIVERSITY OF EAST ANGLIA}\\
+	\textbf{MODULE :} \@moduleCode\hfill{}\textbf{School of Computing Sciences}\\[2ex]
+	\makebox[\mylength][l]{ASSIGNMENT TITLE}: \@assignmentTitle \\
+	\makebox[\mylength][l]{DATE SET}: \@dateSet\\
+	\makebox[\mylength][l]{DATE \& TIME OF SUBMISSION}: \@submissionDateTime \\
+	\makebox[\mylength][l]{RETURN DATE}: \@returnDate \\
+	\makebox[\mylength][l]{ASSIGNMENT VALUE}: \@assignmentValue \\
+	\makebox[\mylength][l]{SET BY}: \makebox[\maxsetterchecker][l]{\@setter}SIGNED : \\
+	\makebox[\mylength][l]{CHECKED BY}: \makebox[\maxsetterchecker][l]{\@checker}SIGNED :
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\marksheet}{
+	
+	\newgeometry{left=2.5cm,right=2cm}
+	
+	%\pagestyle{empty}
+	\let\savedparindent\relax
+	\newlength{\savedparindent}
+	\setlength{\savedparindent}{\parindent}	
+	\setlength\parindent{0pt}
+	
+    \ifx\@mesec\@empty
+    \relax
+    \else
+    \section{\@mesec}
+    \fi
+
+    \ifx\@mesubsec\@empty
+    \relax
+    \else
+    \subsection{\@mesubsec}
+    \fi
+    
+	\header
+	\subsection*{Aim:} 
+	\@aim 
+    \subsection*{Learning outcomes:}
+	\@learningOutcomes
+    \subsection*{Assessment criteria:}
+    \@assessmentCriteria
+    \subsection*{Description of assignment:}
+	\@desriptionAssignment
+    \subsection*{Required:}
+	\@required
+	\ifx\@handIn\@empty
+	\relax
+	\else
+    \subsection*{Hand-in procedure:}
+	\@handIn
+	\fi
+    \restoregeometry
+	\setlength{\parindent}{\savedparindent}
+	\let\@mesec\@empty
+	\let\@handIn\@empty
+}
+
+    
