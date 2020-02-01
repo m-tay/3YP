@@ -39,14 +39,8 @@ public class PlayerLevelController : MonoBehaviour
             //navMeshBuilder.buildNavMesh();
 
             Debug.Log("REGEN OCCURRED");
-
-
-            }
-            
+            }  
         }
-
-
-
     }
 
     // Update is called once per frame

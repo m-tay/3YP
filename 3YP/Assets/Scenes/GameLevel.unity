@@ -171,12 +171,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -257,12 +252,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -343,12 +333,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -429,12 +414,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -501,11 +481,6 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 19571bf165137254b87c72c2327702aa, type: 3}
   tilesDD:
   - {fileID: 8622471576326396364, guid: 19571bf165137254b87c72c2327702aa, type: 3}
-  helperDD: {fileID: 2565632772866471522, guid: ddbe287ff6e119f40a58e454c1984aef,
-    type: 3}
-  helperD: {fileID: 2565632772866471522, guid: dab3bfca94a5a064e9f681b59a28826f, type: 3}
-  helperL: {fileID: 2565632772866471522, guid: b3e232d5c7cb9be42b057a8b3d000797, type: 3}
-  helperR: {fileID: 2565632772866471522, guid: 9075c19ed802b614394445bc3f2225e1, type: 3}
   startTile: {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be,
     type: 3}
   startpoints:
@@ -557,9 +532,21 @@ MonoBehaviour:
   - {fileID: 1170962645}
   player: {fileID: 1974391871}
   scarecrow: {fileID: 974921375}
-  interiors: []
   endtile: {fileID: 8622471576326396364, guid: 8a048059b7e2fe240b76d91255d510f3, type: 3}
   endpoint: {fileID: 734245225}
+  critPathInteriors:
+  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
+  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
+  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
+  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
+  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
+  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: 1dc93a15f0ca87544a35644f6b328f01, type: 3}
+  - {fileID: 8622471576326396364, guid: 9ae7d2960a2c8894ea8c02d2a6fe49fb, type: 3}
+  - {fileID: 8622471576326396364, guid: 6511b46d11a52dc4c97f1454e707fa2c, type: 3}
+  - {fileID: 8622471576326396364, guid: 9bc84990a3def6542866bf551efbc38a, type: 3}
+  - {fileID: 8622471576326396364, guid: 0149ada9ce43e7b44af4c72589810c95, type: 3}
+  - {fileID: 8622471576326396364, guid: c4b8300ccfd73f142a3eadcaafcbc868, type: 3}
 --- !u!4 &176574683
 Transform:
   m_ObjectHideFlags: 0
@@ -769,12 +756,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1025,12 +1007,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1111,12 +1088,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1197,12 +1169,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1283,12 +1250,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1369,12 +1331,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1524,12 +1481,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1610,12 +1562,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1696,12 +1643,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1812,12 +1754,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -1990,12 +1927,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -2076,12 +2008,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -2168,12 +2095,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -2254,12 +2176,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -2340,12 +2257,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -2723,12 +2635,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -2809,11 +2716,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -2894,12 +2797,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3053,12 +2951,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3139,12 +3032,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3225,12 +3113,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3402,12 +3285,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3579,12 +3457,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3665,12 +3538,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3751,12 +3619,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -3928,12 +3791,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4014,12 +3872,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4100,12 +3953,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4252,12 +4100,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4338,12 +4181,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4424,12 +4262,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4510,12 +4343,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4687,12 +4515,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4773,12 +4596,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -4948,7 +4766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelGenerator: {fileID: 204357507}
-  timeBeforeStartingLevelChanges: 3
+  timeBeforeStartingLevelChanges: 2147483647
   changeLevelEvery: 1
 --- !u!1 &1990200130
 GameObject:
@@ -5001,12 +4819,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -5087,12 +4900,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -5173,12 +4981,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -5259,12 +5062,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50
@@ -5345,12 +5143,7 @@ MonoBehaviour:
   - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
   - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
   interiors:
-  - {fileID: 8622471576326396364, guid: 9923268be12b4514fb71dcba7479a60d, type: 3}
-  - {fileID: 8622471576326396364, guid: 8aefdfcc6a1bb5b478e3cf47529a305c, type: 3}
-  - {fileID: 8622471576326396364, guid: f23c7972e8172b44992ac5bc8578ca57, type: 3}
-  - {fileID: 8622471576326396364, guid: 04a22e6abd5941f4280fcaa572a5ed0d, type: 3}
-  - {fileID: 8622471576326396364, guid: 3beca7d7a5961a644bf2482b8a03b554, type: 3}
-  - {fileID: 8622471576326396364, guid: 1bf786ecb3c6609468dfaaefd996b9fb, type: 3}
+  - {fileID: 8622471576326396364, guid: e8e058d9061fb8b4aac4b5532315f5ef, type: 3}
   doors:
   - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
   percDoorWillSpawn: 50

@@ -6,7 +6,7 @@ public class LevelGenerator : MonoBehaviour
 {
     // GENERATION DEBUG PARAMETERS
     bool genCritialPath = true;
-    bool genFillerTiles = true;
+    bool genFillerTiles = false;
 
     // enum to hold all the types of rooms (directions of entry/exit) that are possible
     public enum roomType{
@@ -32,22 +32,16 @@ public class LevelGenerator : MonoBehaviour
     public GameObject[] tilesD;
     public GameObject[] tilesDD;
 
-    public GameObject helperDD;
-    public GameObject helperD;
-    public GameObject helperL;
-    public GameObject helperR;
-
     public GameObject startTile;
     public GameObject[] startpoints;    // holds all the players possible start points
     public GameObject[] fillpoints;     // holds all the fillpoints, to spawn rooms on if empty
     public GameObject player;
     public GameObject scarecrow;
     Vector3 scarecrowStart;
-    public GameObject[] interiors;
     public GameObject endtile;
     public GameObject endpoint;
-    
-
+   
+    public GameObject[] critPathInteriors;
 
     private float moveAmount = 27; // how to move spawning position around - size of tile
     private Direction direction;      // direction to move random walk level generator
@@ -64,6 +58,7 @@ public class LevelGenerator : MonoBehaviour
     private int maxX = 130;
     private int minZ = -160;
 
+    private Vector3 newPos;
 
 
     // Start is called before the first frame update
@@ -76,6 +71,7 @@ public class LevelGenerator : MonoBehaviour
         // init spawn room with BLR room (tiles[3]) at random location
         rand = Random.Range(0, startpoints.Length); // get random position
         var room = Instantiate(startTile, startpoints[rand].transform.position, Quaternion.identity); // spawn room
+        Instantiate(critPathInteriors[0], startpoints[rand].transform.position, Quaternion.identity);
 
         // move player and enemy to starting positions
         player.transform.position = startpoints[rand].transform.position;
@@ -83,7 +79,7 @@ public class LevelGenerator : MonoBehaviour
 
         // set first direction for random walk level generation
         direction = getRandDirection();
-        Debug.Log("First direction is " + direction + " , location is " + transform.position);
+        //Debug.Log("First direction is " + direction + " , location is " + transform.position);
 
         if(direction == Direction.Down) {
             downCount++;
@@ -133,9 +129,9 @@ public class LevelGenerator : MonoBehaviour
                 downCount = 0;
                 
                 // create new position and move transform there
-                Vector3 newPos = new Vector3(transform.position.x + moveAmount, transform.position.y, transform.position.z);
+                newPos = new Vector3(transform.position.x + moveAmount, transform.position.y, transform.position.z);
                 transform.position = newPos;
-                Debug.Log("Going right, spawning at " + newPos);
+                //Debug.Log("Going right, spawning at " + newPos);
 
                 // generate next move, do not allow left moves
                 direction = getRandDirection();
@@ -146,7 +142,7 @@ public class LevelGenerator : MonoBehaviour
                 if(transform.position.x + moveAmount + 2 > maxX)  {
                     direction = Direction.Down; // if reached bound, go down
                     downCount++;
-                    Debug.Log("Right bound UP NEXT reached, going down");
+                    //Debug.Log("Right bound UP NEXT reached, going down");
                 
                 }
 
@@ -154,7 +150,7 @@ public class LevelGenerator : MonoBehaviour
             else {
                 direction = Direction.Down; // if reached bound, go down
                 downCount++;
-                Debug.Log("Right bound reached, going down");
+                //Debug.Log("Right bound reached, going down");
             }
 
             // spawn tile at new location - all rooms have R exits so randomise from tiles[]
@@ -164,14 +160,26 @@ public class LevelGenerator : MonoBehaviour
             if(direction == Direction.Down && downCount < 2) {
                 r = Random.Range(0, tilesD.Length);
                 var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
+                
+                r = Random.Range(0, critPathInteriors.Length);
+                Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
+                
 
 
 
             }
             if (direction == Direction.Down && downCount >= 2) {
+                // create new position and move transform there
+                newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
+                transform.position = newPos;
+
                 r = Random.Range(0, tilesDD.Length);
                 var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
 
+                r = Random.Range(0, critPathInteriors.Length);
+                Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
+
+                Debug.Log(transform.position + "RDown >=2 happening");
 
                 
 
@@ -179,9 +187,8 @@ public class LevelGenerator : MonoBehaviour
             if (direction == Direction.Right) {
                 var room = Instantiate(tilesR[r], transform.position, Quaternion.identity);
 
-
-                
-
+                r = Random.Range(0, critPathInteriors.Length);
+                Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
 
                 //Debug.Log("Spawning tile at " + transform.position);
             }
@@ -195,9 +202,9 @@ public class LevelGenerator : MonoBehaviour
                 downCount = 0;
     
                 // create new position and move transform there
-                Vector3 newPos = new Vector3(transform.position.x - moveAmount, transform.position.y, transform.position.z);
+                newPos = new Vector3(transform.position.x - moveAmount, transform.position.y, transform.position.z);
                 transform.position = newPos;
-                Debug.Log("Going left, spawning at " + newPos);
+                //Debug.Log("Going left, spawning at " + newPos);
                 
                 // generate next move, do not allow right moves
                 direction = getRandDirection();
@@ -208,14 +215,14 @@ public class LevelGenerator : MonoBehaviour
                 if(transform.position.x - moveAmount - 2 < minX)  {
                     direction = Direction.Down; // if reached bound, go down
                     downCount++;
-                    Debug.Log("Left bound UP NEXT reached, going down");
+                    //Debug.Log("Left bound UP NEXT reached, going down");
                 }
 
             }
             else {
                 direction = Direction.Down;
                 downCount++;
-                Debug.Log("Left bound reached, going down");
+                //Debug.Log("Left bound reached, going down");
 
             }
             
@@ -227,17 +234,30 @@ public class LevelGenerator : MonoBehaviour
                 r = Random.Range(0, tilesD.Length);
                 var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
 
+                r = Random.Range(0, critPathInteriors.Length);
+                Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
+
                 
             } 
             if(direction == Direction.Down && downCount >= 2) {
+                // create new position and move transform there
+                newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
+                transform.position = newPos;
+
                 r = Random.Range(0, tilesDD.Length);
                 var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
+
+                r = Random.Range(0, critPathInteriors.Length);
+                Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
+                    Debug.Log(transform.position + "LDown >=2 happening");
 
                 
             }
             if(direction == Direction.Left) {
                 var room = Instantiate(tilesL[r], transform.position, Quaternion.identity);
 
+                r = Random.Range(0, critPathInteriors.Length);
+                Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
                 
                 //Debug.Log("Spawning tile at " + transform.position);
             }
@@ -251,16 +271,18 @@ public class LevelGenerator : MonoBehaviour
             if(transform.position.z > minZ) { // check for bounding
                 
                 // create new position and move transform there
-                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
+                newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
                 transform.position = newPos;
-                Debug.Log("Going down, spawning at " + newPos);
+                //Debug.Log("Going down, spawning at " + newPos);
 
                 // check if moved down more than once - spawn all 4 opening room
                 if(downCount >= 2) {
                     r = Random.Range(0, tilesDD.Length);
                     var room = Instantiate(tilesDD[r], transform.position, Quaternion.identity);
 
-                    
+                    r = Random.Range(0, critPathInteriors.Length);
+                    Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);    
+                    Debug.Log(transform.position + "Down >=2 happening");
 
                 }
                 else {
@@ -268,6 +290,9 @@ public class LevelGenerator : MonoBehaviour
                     r = Random.Range(0, tilesD.Length);
                     var room = Instantiate(tilesD[r], transform.position, Quaternion.identity);
 
+                    r = Random.Range(0, critPathInteriors.Length);
+                    Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
+                    Debug.Log(transform.position + "Down < happening");
 
                     //Debug.Log("Spawning tile at " + transform.position);
                 }
@@ -277,7 +302,7 @@ public class LevelGenerator : MonoBehaviour
                 keepGenerating = false;
 
                 // move down a tile to place exit
-                Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
+                newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z - moveAmount);
                 transform.position = newPos;
                 
                 // move level endtile to this tile
@@ -299,7 +324,7 @@ public class LevelGenerator : MonoBehaviour
 
         }
 
-        Debug.Log("Downcount: " + downCount);
+        //Debug.Log("Downcount: " + downCount);
 
 
     }
