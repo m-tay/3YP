@@ -23,11 +23,11 @@ public class RoomAdder : MonoBehaviour
 
         // cast a ray up to see if rooms are detected
         if(Physics.Raycast(transform.position, up, 10)) {
-            Debug.Log("ROOM DETECTED AT" + transform.position);
+            Debug.Log(transform.position + "ROOM DETECTED AT" );
         }
         else {
             // if no room detected, spawn a room
-            Debug.Log("ROOM NOT DETECTED AT" + transform.position);
+            Debug.Log(transform.position + "ROOM NOT DETECTED AT");
             Instantiate(tiles[0], transform.position, Quaternion.identity);
 
             // generate random interior (this happens in all rooms)
@@ -35,15 +35,12 @@ public class RoomAdder : MonoBehaviour
             Instantiate(interiors[r], transform.position, Quaternion.identity);
             
         }
-
-        // generate random interior (this happens in all rooms)
-        r = Random.Range(0, interiors.Length);
-        Instantiate(interiors[r], transform.position, Quaternion.identity);
          
     }
 
     public void AddDoors() {
         // DOOR SPAWNING
+        Debug.Log("Door spawning script happening");
 
         // setup raycasting
         RaycastHit hit;
@@ -189,13 +186,9 @@ public class RoomAdder : MonoBehaviour
                 // destroy doorframe
                 Destroy(obj);
 
-            }
-            
+            }            
             return false;
         }
-
-
-
         return false;
     }
 

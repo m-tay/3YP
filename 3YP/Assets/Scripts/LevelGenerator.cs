@@ -6,7 +6,7 @@ public class LevelGenerator : MonoBehaviour
 {
     // GENERATION DEBUG PARAMETERS
     bool genCritialPath = true;
-    bool genFillerTiles = false;
+    bool genFillerTiles = true;
 
     // enum to hold all the types of rooms (directions of entry/exit) that are possible
     public enum roomType{
@@ -179,11 +179,7 @@ public class LevelGenerator : MonoBehaviour
                 r = Random.Range(0, critPathInteriors.Length);
                 Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
 
-                Debug.Log(transform.position + "RDown >=2 happening");
-
-                
-
-            }
+                            }
             if (direction == Direction.Right) {
                 var room = Instantiate(tilesR[r], transform.position, Quaternion.identity);
 
@@ -249,8 +245,6 @@ public class LevelGenerator : MonoBehaviour
 
                 r = Random.Range(0, critPathInteriors.Length);
                 Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
-                    Debug.Log(transform.position + "LDown >=2 happening");
-
                 
             }
             if(direction == Direction.Left) {
@@ -282,8 +276,7 @@ public class LevelGenerator : MonoBehaviour
 
                     r = Random.Range(0, critPathInteriors.Length);
                     Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);    
-                    Debug.Log(transform.position + "Down >=2 happening");
-
+               
                 }
                 else {
                     // spawn tile at new location
@@ -292,8 +285,7 @@ public class LevelGenerator : MonoBehaviour
 
                     r = Random.Range(0, critPathInteriors.Length);
                     Instantiate(critPathInteriors[r], transform.position, Quaternion.identity);
-                    Debug.Log(transform.position + "Down < happening");
-
+                  
                     //Debug.Log("Spawning tile at " + transform.position);
                 }
             }

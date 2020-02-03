@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &4707547184266263126
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9104960090691382201}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 4a690dd6f32ca624b8acbc0827735250, type: 3}
 --- !u!64 &8645108031421981026
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28,6 +14,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 8091262537045578135, guid: 4a690dd6f32ca624b8acbc0827735250, type: 3}
+--- !u!64 &4707547184266263126
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104960090691382201}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 4a690dd6f32ca624b8acbc0827735250, type: 3}
 --- !u!114 &49523010361672903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,7 +49,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 4a690dd6f32ca624b8acbc0827735250, type: 3}
       propertyPath: m_Name
-      value: Classic_Wall
+      value: Classic_Wall_Snaps001
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4a690dd6f32ca624b8acbc0827735250, type: 3}
       propertyPath: m_StaticEditorFlags
