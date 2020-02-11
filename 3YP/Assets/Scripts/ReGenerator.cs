@@ -38,7 +38,7 @@ public class ReGenerator : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 
                 // regenerate new interior
-                GetComponent<RoomAdder>().CheckAndFill();
+                GetComponent<RoomAdder>().AddInterior();
             
             }
         }

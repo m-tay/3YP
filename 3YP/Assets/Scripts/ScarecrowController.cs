@@ -18,8 +18,9 @@ public class ScarecrowController : MonoBehaviour
     }
     public GameObject player;
     public State state = State.Chasing;
-    public float rotationSpeed = 1.0f;
-    public float moveSpeed = 0.5f;
+    
+    // parameters for navagent
+    public float agentRadius = 0.1f;
 
 
 
@@ -42,9 +43,15 @@ public class ScarecrowController : MonoBehaviour
 
         // check there is a closest hit, start navagent there
         if( UnityEngine.AI.NavMesh.SamplePosition(startPoint, out closestHit, 500, 1 ) ){
+            // add navagent 
             transform.position = closestHit.position;
             gameObject.AddComponent<UnityEngine.AI.NavMeshAgent>();
             agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+            // set navagent's parameters
+            agent.radius = agentRadius;
+
+
             Debug.Log("NavAgent for Scarecrow started successfully!");
             
         }

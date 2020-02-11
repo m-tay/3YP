@@ -1,31 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &9066562557180192086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997468478404414803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6b7bb8eda7449d41b0cacc1c59e83d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!64 &7999444024178216862
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997468478404414805}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: 7617bca81475c554d933a1e9d2da33e9, type: 3}
 --- !u!64 &7195797835998716754
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40,6 +14,48 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -1411092572670658710, guid: 7617bca81475c554d933a1e9d2da33e9, type: 3}
+--- !u!208 &3844971959356250183
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997468478404414807}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.55, y: 1.5, z: 1.55}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 1.5, y: 1.5, z: 1.5}
+  m_TimeToStationary: 0.5
+--- !u!64 &7999444024178216862
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997468478404414805}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300002, guid: 7617bca81475c554d933a1e9d2da33e9, type: 3}
+--- !u!114 &9066562557180192086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997468478404414803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b7bb8eda7449d41b0cacc1c59e83d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &997468478404316151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,7 +65,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 7617bca81475c554d933a1e9d2da33e9, type: 3}
       propertyPath: m_Name
-      value: Classic_Wall_Corner
+      value: Classic_Wall_Corner_Snaps001
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7617bca81475c554d933a1e9d2da33e9, type: 3}
       propertyPath: m_StaticEditorFlags

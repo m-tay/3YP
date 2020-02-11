@@ -38,6 +38,12 @@ public class RoomAdder : MonoBehaviour
          
     }
 
+    public void AddInterior() {
+        // generate random interior 
+        r = Random.Range(0, interiors.Length);
+        Instantiate(interiors[r], transform.position, Quaternion.identity);
+    }
+
     public void AddDoors() {
         // DOOR SPAWNING
         Debug.Log("Door spawning script happening");

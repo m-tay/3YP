@@ -9,7 +9,7 @@
 \usepackage{float}
 \graphicspath{ {./} }
 
-\title{Third Year Project: Progress Report}
+\title{Third Year Project: Report}
 \author{Matthew Taylor}
 \registration{100151729}
 \supervisor{Dr Rudy Lapeer}
@@ -22,19 +22,17 @@
 \begin{section}{Introduction}
 
 \subsection{Aim of the project}
-The project aims to implement a first person video game which uses procedural generation (PCG) to provide a novel and interesting game experience. The project will explore the technical aspects of using PCG as a core feature of a game, specifically, implementation and performance. 
-
-It will focus on real-time procedural level generation and providing a compelling, dynamic level structure.
+The project aimed to implement a first person video game which uses procedural generation to provide a novel and interesting game experience. The project will explore the technical aspects of using PCG as a core feature of a game, specifically, implementation and performance. 
 
 \subsection{Motivation}
-Procedural generation is not a new field, especially in video games, but there are interesting areas that are seldom explored.
+Procedural generation is not a new field, especially in video games, but there are interesting areas that are seldom explored. One of these areas is real-time procedural generation.
 
-The motivation behind the project's aims are to explore new and interesting concepts, namely, using PCG as a core feature in a game and using real-time procedural generation to provide an interesting experience.
+The motivation behind the project's aims were to explore new and interesting concepts, namely, using PCG as a core feature in a game and using real-time procedural generation to provide an interesting experience.
 
 \subsection{Literature}
-The project also draws inspiration and guidance from existing PCG games, as described in papers by \citet{spufford_2003}, \cite{welsh_2016} and \cite{gct-spelunky}.
+The project also drew inspiration and guidance from existing PCG games, as described in papers by \citet{spufford_2003}, \cite{welsh_2016} and \cite{gct-spelunky}.
 
-The project also takes into account the wealth of research done on PCG techniques, as described in papers by \cite{Perlin:1985:IS:325165.325247}, \cite{ebert2003texturing} and \cite{Dormans:2010:ALD:1814256.1814257}.
+The project also took into account the wealth of research done on PCG techniques, as described in papers by \cite{Perlin:1985:IS:325165.325247}, \cite{ebert2003texturing} and \cite{Dormans:2010:ALD:1814256.1814257}.
    
 \end{section}
 
@@ -45,7 +43,7 @@ This section will detail the issues identified at the project commencement and t
 \subsection{Project scope}
 Procedural content generation is a large field that has been explored in the literature since the 1980s. The paper by \cite{Hendrikx:2013:PCG:2422956.2422957} details this, providing a survey of PCG in games and the many techniques that have been used. A potential issue of the project is attempting to explore and implement too many of these techniques and ending up with a dilted project of little technical interest. 
 
-To address this, the project scope was focussed on some areas identified as being under explored in the survey - level generation in real time systems. This will allow the project to explore several ideas in this domain and provide a comprehensive implementation in a fully featured game.
+To address this, the project scope was focussed on some areas identified as being under-explored in the survey - level generation in real time systems. This will allow the project to explore several ideas in this domain and provide a comprehensive implementation in a fully featured game.
 
 \subsection{Designing 3D games}
 Designing 3D games and the assets required to populate the levels created could take a long time, especially if much of the functionality is created from scratch. 
@@ -53,7 +51,7 @@ Designing 3D games and the assets required to populate the levels created could 
 To address this and enable the project to be achieved in a realistic timeframe, the Unity game engine was chosen. This tool enables relatively rapid production 3D game enviroments and assets, as well as being well documented and supported.
 
 \subsection{Performance}
-A game's performance is a critical aspect of its success. If the game cannot be played in a sustainable framerate on common hardware, it could be considered a techncial failure. Performance is a broad term, so the project will specifically focus on the following two aspects of performance. The first aspect is \textbf{level generation speed}. Each time the game loads, a new level is generated, so achieving a suitable speed in generating the levels and performing the associated work, like loading geometry, was a key consideration. The second aspect is \textbf{framerate}. The project will procedurally load a considerable amount of geometry in varied conditions. As much of the geometry will not be static, it will be required to load a large amount of meshes into memory, which could affect the performance.  
+A game's performance was a critical aspect of its success. If the game cannot be played in a sustainable framerate on common hardware, it could be considered a techncial failure. Performance is a broad term, so the project will specifically focus on the following two aspects of performance. The first aspect is \textbf{level generation speed}. Each time the game loads, a new level is generated, so achieving a suitable speed in generating the levels and performing the associated work, like loading geometry, was a key consideration. The second aspect is \textbf{framerate}. The project will procedurally load a considerable amount of geometry in varied conditions. As much of the geometry will not be static, it will be required to load a large number of meshes into memory, which could affect the performance.  
 
 \subsection{Evaluation of success} \label{evalsuccess}
 A key issue with this project is evaluating if it is successful. If there is no clear notion of what success looks like, the project could progress in unproductive directions. Below are the key measures of success chosen at the start of the project to measure success against.
@@ -82,23 +80,23 @@ Performance is another key component of the project succeeding. If the game resp
 \begin{section}{Design and planning}
 
 \subsection{Implementation methodology}
-The project development operates under an Agile methology. Agile does not require that all requirements (or "user stories") are defined up front, instead it is encouraged that they are developed and refined during the lifecycle of the project.
+The project development operated under an Agile methology. Agile does not require that all requirements (or ``user stories'') are defined up front, instead it is encouraged that they are developed and refined during the lifecycle of the project.
 
-The project itself is divided into Agile "sprints". It was decided to deliver a sprint every two weeks, as this fit with the development time given to the project and providing updates to the project supervisor.
+The project itself was divided into Agile ``sprints''. It was decided to deliver a sprint every two weeks, as this fit with the development time given to the project and providing updates to the project supervisor.
 
-While all the stories were not required at the outset, as part of the planning, it was decided to plot rough timescales against Agile "epics". These epics provide a high-level view of functionality and are detailed in Table \ref{tab:epics} in Appendix D.
+While all the stories were not required at the outset, as part of the planning, it was decided to plot rough timescales against Agile ``epics''. These epics provide a high-level view of functionality and are detailed in Table \ref{tab:epics} in Appendix D.
 
-The epics also contain very high-level user stories, which provide a little more detail. These were decided at the project outset, then refined during development. Before any user story can be developed, it is required that more detailed requirements are written. These are then recorded and tracked on Trello. 
+The epics also contain very high-level user stories, which provide a little more detail. These were decided at the project outset, then refined during development. Before any user story can be developed, it was required that more detailed requirements were written. These were then recorded and tracked on Trello. 
 
 \subsection{Implementation plan}
 
 With the high-level design documented in the epics, planning of these epics against timescales was required. This timeline plan is visible in Figure \ref{fig:gantt1} in Appendix A. Progress was then tracked against this Gantt chart to ensure that progress was being made and that the project could be achieved as planned.
 
-As the project is run using Agile principles, the Gantt chart has been revised to reflect changes to the plan. These changes are visible in Figure \ref{fig:gantt2} in Appendix A. Also included is the progress of the tasks so far.
+As the project was run using Agile principles, the Gantt chart was revised to reflect changes to the plan. These changes are visible in Figure \ref{fig:gantt2} in Appendix A. 
 
 Changes to the Gantt chart include the addition of a Level Generation task - the Level Re-Generator. This reflects a focus of the project on procedurally re-generating levels in real-time, so this has been split out as a seperate task and given a shorter timescale, reflecting the importance of the task to the project.
 
-The gameplay section has been split into two tasks, reflecting the focus on implementing core gameplay as a priority, with enhanced gameplay being desirable but not as critical to the evaluation of success of the project.
+The gameplay section was split into two tasks, reflecting the focus on implementing core gameplay as a priority, with enhanced gameplay being desirable but not as critical to the evaluation of success of the project.
 
 
 \subsection{UML}
