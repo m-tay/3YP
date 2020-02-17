@@ -20,11 +20,6 @@ Germer, T. and Schwarz, M. (2009).
 \newblock Procedural arrangement of furniture for real-time walkthroughs.
 \newblock {\em Computer Graphics Forum}, 28(8):2068--2078.
 
-\bibitem[Hendrikx et~al., 2013]{Hendrikx:2013:PCG:2422956.2422957}
-Hendrikx, M., Meijer, S., Van Der~Velden, J., and Iosup, A. (2013).
-\newblock Procedural content generation for games: A survey.
-\newblock {\em ACM Trans. Multimedia Comput. Commun. Appl.}, 9(1):1:1--1:22.
-
 \bibitem[Perlin, 1985]{Perlin:1985:IS:325165.325247}
 Perlin, K. (1985).
 \newblock An image synthesizer.
@@ -38,6 +33,10 @@ Spufford, F. (2003).
 \bibitem[Taylor and Parberry, 2010]{taylor-parberry}
 Taylor, J. and Parberry, I. (2010).
 \newblock Computerized clutter: How to make a virtual room look lived-in.
+
+\bibitem[Unity Documentation~2019.3, 2019]{technologies_2019}
+Unity Documentation~2019.3, U. (2019).
+\newblock Profiler overview.
 
 \bibitem[Welsh, 2016]{welsh_2016}
 Welsh, O. (2016).

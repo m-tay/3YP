@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -32,9 +33,11 @@ public class LevelGenerator : MonoBehaviour
     public GameObject[] tilesD;
     public GameObject[] tilesDD;
 
+    public GameObject roomSpawnerObject;
+
     public GameObject startTile;
     public GameObject[] startpoints;    // holds all the players possible start points
-    public GameObject[] fillpoints;     // holds all the fillpoints, to spawn rooms on if empty
+    public List<GameObject> fillpoints;     // holds all the fillpoints, to spawn rooms on if empty
     public GameObject player;
     public GameObject scarecrow;
     Vector3 scarecrowStart;
@@ -42,6 +45,8 @@ public class LevelGenerator : MonoBehaviour
     public GameObject endpoint;
    
     public GameObject[] critPathInteriors;
+
+    public int levelWidth = 10;
 
     private float moveAmount = 27; // how to move spawning position around - size of tile
     private Direction direction;      // direction to move random walk level generator
@@ -64,8 +69,14 @@ public class LevelGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-      
+        // timing experiment start
+        System.DateTime startTime = System.DateTime.UtcNow;
 
+        // generate level limits
+        maxX = (int)(levelWidth * moveAmount + 10);
+        minZ = - (int)((levelWidth * moveAmount) - 10);
+
+        // setup random variable
         int rand = 0;
 
         // init spawn room with BLR room (tiles[3]) at random location
@@ -88,6 +99,9 @@ public class LevelGenerator : MonoBehaviour
         // set transform position to match starting position
         transform.position = startpoints[rand].transform.position;
 
+        // places all the points to spawn rooms
+        PlaceRoomSpawners();
+
         // run level generation
         if(genCritialPath)
             Generate();
@@ -102,13 +116,38 @@ public class LevelGenerator : MonoBehaviour
         if(genFillerTiles)
             AddDoors();
 
-        // move scarecrow to start point
-        //Vector3 scarecrowStart = new Vector3(player.transform.position.x + 3, player.transform.position.y, player.transform.position.z);
-        //scarecrow.transform.position = scarecrowStart;
+        // timing experiment end
+        System.TimeSpan ts = System.DateTime.UtcNow - startTime;
+        Debug.Log("Level generated in " + ts.Milliseconds.ToString() + " milliseconds");
         
         // add navagent to scarecrow dynamically
         var sc = scarecrow.GetComponent<ScarecrowController>();
         sc.startNavAgent(scarecrowStart);
+    }
+
+    // places the room spawning objects, which are then used to generate the levels
+    // 
+    private void PlaceRoomSpawners() {
+        // store starting position
+        Vector3 startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+        // set transform to starting position
+        transform.position = startPos;
+
+        //Debug.Log("Start pos " + transform.position);
+
+        // nested loop to generate a grid
+        for(int i = 0; i < levelWidth; i++) {
+
+            for(int j = 0; j < levelWidth; j++) {
+                // get new transform position
+                Vector3 movedPos = new Vector3(startPos.x + (i * moveAmount), startPos.y, startPos.z - (j * moveAmount) );
+
+                var room = Instantiate(roomSpawnerObject, movedPos, Quaternion.identity);
+                fillpoints.Add(room);
+            }
+        }
+
     }
 
     private void Generate() {
@@ -329,14 +368,14 @@ public class LevelGenerator : MonoBehaviour
     // fills empty gaps with rooms
     private void Fill() {
         // for all fillpoints
-        for(int i = 0; i < fillpoints.Length; i++) {
+        for(int i = 0; i < fillpoints.Count; i++) {
             fillpoints[i].GetComponent<RoomAdder>().CheckAndFill();
         }
     }
 
     public void AddDoors() {
         // for all fillpoints
-        for(int i = 0; i < fillpoints.Length; i++) {
+        for(int i = 0; i < fillpoints.Count; i++) {
             fillpoints[i].GetComponent<RoomAdder>().AddDoors();
         }
     }

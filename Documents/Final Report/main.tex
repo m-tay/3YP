@@ -1,4 +1,4 @@
-\documentclass[progress]{cmpreport}
+\documentclass[final]{cmpreport}
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -7,13 +7,26 @@
 \usepackage{booktabs}
 \usepackage{appendix}
 \usepackage{float}
+\usepackage{algorithm}
+\usepackage{algpseudocode} % http://ctan.org/pkg/algorithm
+\usepackage{wrapfig}
 \graphicspath{ {./} }
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
 
 \title{Third Year Project: Report}
 \author{Matthew Taylor}
 \registration{100151729}
 \supervisor{Dr Rudy Lapeer}
 \ccode{CMP-6013Y}
+
+\summary{This report details an implementation of procedural generation in a video game environment.}
+
+\acknowledgements{I would like to thank Dr Rudy Lapeer, from University of East Anglia, for his wisdom and guidance.}
 
 \begin{document}
 
@@ -34,46 +47,6 @@ The project also drew inspiration and guidance from existing PCG games, as descr
 
 The project also took into account the wealth of research done on PCG techniques, as described in papers by \cite{Perlin:1985:IS:325165.325247}, \cite{ebert2003texturing} and \cite{Dormans:2010:ALD:1814256.1814257}.
    
-\end{section}
-
-\begin{section}{Issues and problems}
-
-This section will detail the issues identified at the project commencement and then detail how they have been addressed.
-
-\subsection{Project scope}
-Procedural content generation is a large field that has been explored in the literature since the 1980s. The paper by \cite{Hendrikx:2013:PCG:2422956.2422957} details this, providing a survey of PCG in games and the many techniques that have been used. A potential issue of the project is attempting to explore and implement too many of these techniques and ending up with a dilted project of little technical interest. 
-
-To address this, the project scope was focussed on some areas identified as being under-explored in the survey - level generation in real time systems. This will allow the project to explore several ideas in this domain and provide a comprehensive implementation in a fully featured game.
-
-\subsection{Designing 3D games}
-Designing 3D games and the assets required to populate the levels created could take a long time, especially if much of the functionality is created from scratch. 
-
-To address this and enable the project to be achieved in a realistic timeframe, the Unity game engine was chosen. This tool enables relatively rapid production 3D game enviroments and assets, as well as being well documented and supported.
-
-\subsection{Performance}
-A game's performance was a critical aspect of its success. If the game cannot be played in a sustainable framerate on common hardware, it could be considered a techncial failure. Performance is a broad term, so the project will specifically focus on the following two aspects of performance. The first aspect is \textbf{level generation speed}. Each time the game loads, a new level is generated, so achieving a suitable speed in generating the levels and performing the associated work, like loading geometry, was a key consideration. The second aspect is \textbf{framerate}. The project will procedurally load a considerable amount of geometry in varied conditions. As much of the geometry will not be static, it will be required to load a large number of meshes into memory, which could affect the performance.  
-
-\subsection{Evaluation of success} \label{evalsuccess}
-A key issue with this project is evaluating if it is successful. If there is no clear notion of what success looks like, the project could progress in unproductive directions. Below are the key measures of success chosen at the start of the project to measure success against.
-
-\subsubsection{Convincing levels}
-The levels must appear convincing. This is difficult to quantify, but nevertheless is an important attribute. The levels (at least in the initial design) will be mazes generated in a grid, with the grid sections subdivided in different ways.
-
-This could easily create a boring level, where the grid pattern is discernable and the rooms are boring and procedural to traverse. Successful generation of levels will avoid these issues.
-
-\subsubsection{Convincing decoration}
-The decoration in each individual room will contribute to how convincing and hand-crafted each level looks. As described in \cite{doi:10.1111/j.1467-8659.2009.01351.x} and \cite{taylor-parberry}, there are several challenges to making room decoration appear to be hand-made when it is procedurally generated. Of particular focus will be generating furniture and objects in positions that feel realistic and unique.
-
-\subsubsection{Performance}
-Performance is another key component of the project succeeding. If the game responds poorly, it will be frustrating to play. Performance will be measured in a few ways:
-\newline
-\begin{compactitem}
-    \item{\textbf{Framerate}: must be at least 30 frames per second}
-    \item{\textbf{Initial loading time}: must take less than 30 seconds}
-    \item{\textbf{Smooth level re-generation}: no dip in framerate below 30 frames per second}
-\end{compactitem}
-
-
 
 \end{section}
 
@@ -97,7 +70,6 @@ As the project was run using Agile principles, the Gantt chart was revised to re
 Changes to the Gantt chart include the addition of a Level Generation task - the Level Re-Generator. This reflects a focus of the project on procedurally re-generating levels in real-time, so this has been split out as a seperate task and given a shorter timescale, reflecting the importance of the task to the project.
 
 The gameplay section was split into two tasks, reflecting the focus on implementing core gameplay as a priority, with enhanced gameplay being desirable but not as critical to the evaluation of success of the project.
-
 
 \subsection{UML}
 
@@ -125,41 +97,184 @@ Rooms are decorated with interior sub-dividing walls and other elements to provi
 
 In the prototype design, a single point is used to populate all geometry from the centre of the room. However, iterations on the design will use several points which an agent will scan through to populate things like sub-rooms, corridors, walls and desks with appropriate decorations, providing considerable variation for little asset generation cost.
 
+\subsection{Evaluation of success} \label{evalsuccess}
+A key issue with this project is evaluating if it is successful. If there is no clear notion of what success looks like, the project could progress in unproductive directions. Below are the key measures of success chosen at the start of the project to measure success against.
+
+\subsubsection{Convincing levels}
+The levels must appear convincing. This is difficult to quantify, but nevertheless is an important attribute. The levels (at least in the initial design) will be mazes generated in a grid, with the grid sections subdivided in different ways.
+
+This could easily create a boring level, where the grid pattern is discernable and the rooms are boring and procedural to traverse. Successful generation of levels will avoid these issues.
+
+\subsubsection{Convincing decoration}
+The decoration in each individual room will contribute to how convincing and hand-crafted each level looks. As described in \cite{doi:10.1111/j.1467-8659.2009.01351.x} and \cite{taylor-parberry}, there are several challenges to making room decoration appear to be hand-made when it is procedurally generated. Of particular focus will be generating furniture and objects in positions that feel realistic and unique.
+
+\subsubsection{Performance}
+Performance is another key component of the project succeeding. If the game responds poorly, it will be frustrating to play. Performance will be measured in a few ways:
+\begin{compactitem}
+    \item{\textbf{Framerate}: must be at least 30 frames per second}
+    \item{\textbf{Initial loading time}: must take less than 30 seconds}
+    \item{\textbf{Smooth level re-generation}: no dip in framerate below 30 frames per second}
+\end{compactitem}
+
+\subsection{Experimental methodology}
+The experimental results of the project will focus entirely on performance, as this is objectively measureable, as compared to the more subjective nature of how convincing the levels are. The experiments will focus on two main areas of performance: generation time performance and runtime performance.
+
+\subsubsection{Generation time performance}
+The experiments around the time it takes to procedurally generate levels will be simple timing experiments, using Unity scripting methods to provide timings of the time it takes to generate levels. These experiments will be run multiple times, with averages taken, to provide more accurate results.
+
+The experiments will be run on different parameters, like level size, to test how effective the procedural generation implementation is at scale.
+
+\subsubsection{Runtime performance}
+Runtime performance will be evaluated using the Unity Profiler tool. This (by default) provides a detailed snapshot of system resources and performance metrics from a rolling 300ms window of gameplay. For the experiments, the game will be allowed to generate the level and when gameplay begins, a 5 second period of movement will be allowed to elapse before measurements are taken. This is to allow for the performance to stabilise. These experiments will be repeated multiple times, with averages taken, to provide more accurate results.
+
+These experiments will be run on several different parameters, comparing:
+
+\begin{compactitem}
+    \item{Different map sizes}
+    \item{Static vs real-time map regeneration}
+    \item{Whether AIs are navigating the level}
+    \item{Whether map culling is enabled}
+\end{compactitem}
+
+Performance tests were run using the Unity Editor, as compared to compiled version of the code. This was done for two reasons, the first being that much of the timing experiment code outputs to a debug console. The second reason is that the Unity Editor is required to use the Unity Profiler (see \citet{technologies_2019}) in order to access detailed performance statistics.
+
+\subsubsection{Reference hardware}
+To ensure consistent results, the same hardware was used for all experiments and a consistent test environment was established. The hardware used for testing was considered to be a reasonable reflection of recent PC hardware - it is not sufficiently powerful to make the results unreplicable by other users.
+
+The reference hardware specification was:
+\begin{compactitem}
+    \item{\textbf{Operating System}: Windows 10 Home}
+    \item{\textbf{CPU}: Intel Core i5-7200 @ 2.5GHz}
+    \item{\textbf{Graphics}: Intel HD Graphics 620 (integrated chipset)}
+    \item{\textbf{RAM}: 8GB}
+\end{compactitem}
+
+The test environment involved running Windows 10 with no other applications open, except for the Unity Editor. All tests were run operating on mains power, so no power-saving CPU throttling would occur. 
+
 \end{section}
 
-\begin{section}{Evaluation of progress}
-
-\subsection{Progress against plan}
-As detailed in the revised Gantt chart in Figure \ref{fig:gantt2} in Appendix A, progress is broadly on plan. The prototyping of the level and room generation is complete and suitable methods have been implemented. Much of the remaining work on level and room generation will focus on refining the performance, achieving higher levels of complexity and improving performance.
-
-\subsection{Changes to plan}
-The plan has changed slightly since the project began. As can be seen in the differences between Figure \ref{fig:gantt1} and Figure \ref{fig:gantt2} in Appendix A, two new tasks have been added.
-
-The \textbf{Level Re-generator} task has been added and given a shorter timeframe to provide focus on this task. The re-generation aspect of the project is important to consider when evaluating performance It also provides a novel feature not seen in many computer games, so this was considered important to focus on.
-
-The \textbf{Add Enhanced Gameplay} task was also added, to provide a marked difference between the basic implementation and a more detailed gameplay experience. It will not require much effort to provide a basic experience, which will be important to implement early. The project will then consider enhanced gameplay elements (more enemies, pickups, keys for locked doors) towards the end of the project, after the main aims have been achieved.
-
-\subsection{Evaluation against success measures}
-In Section \ref{evalsuccess} on page \pageref{evalsuccess}, three measures of success for the project were defined. 
-
-Against the \textbf{Convincing Levels} measure, the project has the potential to succeed. The guaranteed path/tile filling combination creates large levels, with a path through them. The project does not currently take steps to block off many of the non-guaranteed path tile transitions, so the tile structure is discernable - it is quite easy in parts to see how the tiles are laid out. Future 
-
-Against the \textbf{Convincing Decoration} measure, the project again has the potential to succeed. The prototype of the room decoration system works, but would require quite a lot of manual content generation. However, the project has also successfully implemented agent based approaches to creating levels, so a combination of hand-crafted content and procedural generation should enable rooms to be decorated in ways that are procedural and unique, but also in ways that make sense to humans.
-
-Against the \textbf{Performance} measure is where the project has faced the most challenges. The level generation algorithm is quite efficient. As presented in Figure \ref{tab:gentimes} in Appendix D, even when large sizes are used the generation and instantiation time does not increase by much. Indeed, the main constraint around generating large levels is not the time to generate them, but the real-time performance of the levels.
-
-The real-time aspect suffered when large levels were generated. Average framerate was low (around 10 FPS) when levels and decoration was applied to suitable level sizes for a playable game. This resulted from a lack of occlusion culling and a large draw distance. This was overcome by reducing the viewing frustrum size from it's default size to one more suitable for navigating a closed maze-like level, as demonstrated in Figure \ref{fig:frustrums} on page \ref{fig:frustrums}. Global shadow quality was also reduced. These changes resulted in a change of the average framerate from 10 FPS to 60 FPS - well above the threshold required by the performance metric.
+\begin{section}{Implementation}
+- Screenshots of game working
+- Commented code
+- Technical documentation
 
 \end{section}
 
-\begin{section}{Conclusion}
-To conclude, the project is progressing well against the plan. The project is also meeting the success measures decided at the start of the project.
+\begin{section}{Evaluation}
 
-The project has so far just implemented prototype systems, but the systems are extensible and scalable. The framework implemented will easily allow gameplay elements to be added and for increased graphical fidelity to be achieved. 
+\subsection{Quality of levels}
+- Write about the quality of my levels
 
-This provides a high level of confidence that the project can achieve the objectives of being interesting, fun and of high graphical quality.
+\subsection{Level generation performance}
+Experiments were run to evaluate the performance of the level generation algorithm. The first experiment involved timing code being added to the level generation code, as detailed in Algorithm \ref{algo1}.
+
+\subsubsection{Generation code execution testing}
+
+\begin{algorithm}[H]
+    \caption{Level Generation Timing Code}
+    \label{algo1}
+    \begin{algorithmic}[1]
+        \Require Level Generation Size ${S}$
+        \Ensure Time Elapsed $T$
+        \State{{$t \leftarrow Start Time$}} \Comment{{\em set the time the generation started}}
+        \State{Initialise}
+        \State{Place all tile spawn points} \Comment{{\em based on $S$}}
+        \State{Generate Critical Path} \Comment{{\em adds rooms/interiors with guaranteed route to goal}}
+        \For{$i \leftarrow 1$ to $S$} \Comment{{\em for each tile wide}}
+        \For{$j \leftarrow 1$ to $S$} \Comment{{\em for each tile deep}}
+            \If{$Tile not generated$} \Comment{{\em check tile not on critical path}}
+                \State{Add filler tiles} \Comment{{\em add random tile}}
+                \State{Add room interiors} \Comment{{\em adds random interior}}
+                \State{Add doors} \Comment{{\em adds random doors}}
+            \EndIf{}
+        \EndFor{}
+        \EndFor{}
+
+        \State{return $T \leftarrow time now - t$ \Comment{{\em return time elapsed}}}
+
+\end{algorithmic}
+\end{algorithm}
+
+Varying sizes of level generation grids were used and each experiment run multiple times to provide averaged results. The generation times are displayed in Table \ref{tab:genres1}.
+
+\begin{wraptable}{R}{0.5\textwidth}
+
+    \centering
+    \resizebox{0.49\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{\begin{tabular}[c]{@{}l@{}}Level Size\\ (in tiles)\end{tabular}} & \textbf{Number of tiles} & \textbf{\begin{tabular}[c]{@{}l@{}}Generation Time\\ (in seconds)\end{tabular}} \\ \hline
+    3x3 & 9 & 0.630 \\
+    5x5 & 25 & 0.790 \\
+    7x7 & 49 & 0.591 \\
+    9x9 & 81 & 0.665 \\
+    10x10 & 100 & 0.937 \\
+    12x12 & 144 & 0.929 \\
+    15x15 & 225 & 0.914 \\
+    18x18 & 324 & 0.921 \\
+    20x20 & 400 & 0.953 \\ \hline
+    \end{tabular}%
+    }
+    \caption{Timing results from timing the level generation code of varying size of levels}
+    \label{tab:genres1}
+
+\end{wraptable}
+
+These results demonstrate that the time taken to run the level generation script does not scale significantly with increasing the level size. However, from running the tests it was clear generating a large level (eg, 10x10 or bigger) was taking longer than the reported time of less than a second. It was observed that from starting the game to being able to play it was taking several seconds longer than this.
+
+\subsubsection{Profiling the generation code}
+It was clear from the experiments that even though the generation code runs quickly, even with large levels, the time taken to having a playable level took longer. A new experiment was devised, using the Unity Profiler to gather more accurate and usable results.
+
+\begin{wrapfigure}{R!}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.49\textwidth]{img/Profiler10x10.png}
+    \caption{Unity Profiler showing execution time of LevelGenerator script}
+    \label{fig:profiler}
+\end{wrapfigure}
+
+The Unity Profiler incurs additional overhead from being used, however the overhead is consistent so results are still useful. The Profiler provides very detailed information, but for this experiment only one measure was considered - the time to run the LevelGenerator script during the first frame of execution. An screenshot of the Unity Profiler show results from the first frame can be seen in Figure \ref{fig:profiler}.
+
+The Profiler provides more accurate data, because it measures the time taken to load geometry and textures onto the GPU. This explains the gap between the initial experiment and the observed results, because for large levels a significant amount of level geometry is required to be loaded.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{\begin{tabular}[c]{@{}l@{}}Level Size\\ (in tiles)\end{tabular}} & \textbf{Number of tiles} & \textbf{\begin{tabular}[c]{@{}l@{}}Profiled Generation\\ Time (in seconds)\end{tabular}} \\ \hline
+    3x3 & 9 & 0.595 \\
+    5x5 & 25 & 1.974 \\
+    7x7 & 49 & 2.965 \\
+    9x9 & 81 & 5.842 \\
+    10x10 & 100 & 6.754 \\
+    12x12 & 144 & 12.516 \\
+    15x15 & 225 & 25.183 \\
+    18x18 & 324 & 53.932 \\
+    20x20 & 400 & 86.276 \\ \hline
+    \end{tabular}%
+    \caption{Timing results from profiling the level generation script execution of varying size of levels}
+    \label{tab:genres2}
+\end{table}
+
+The results of the profiling are shown in Table \ref{tab:genres2}. They are much more realistic when compared to anecdotal evidence of observing the performance of the game.
+
+\begin{wrapfigure}{L!}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.49\textwidth]{img/genperftable.png}
+    \caption{Results of profiled generation performance}
+    \label{fig:genperftable}
+\end{wrapfigure}
+
+When plotted on a graph, as shown in Figure \ref{fig:genperftable}, the relationship between the number of rooms generated and the generation time can be seen. It was hypothesised that as the number of rooms increases exponentially, because it is based on a grid of $n x n$ dimensions, that the generation time would also increase exponentially. The plotted trendline and the high $R^2$ value demonstrates this. 
+
+\subsection{In-game performance evaluation}
+
+
 
 \end{section}
+
+
 
 \bibliography{sources}
 
@@ -335,33 +450,6 @@ This provides a high level of confidence that the project can achieve the object
     \label{tab:epicreqs}
 \end{table}
 
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{ |c|c|c| }
-    \hline
-    \textbf{Left} & \textbf{Right} & \textbf{Down} \\ 
-    \hline
-    40\% & 40\% & 20\%\\ 
-    \hline
-    \end{tabular}
-    \caption{A table showing probability of direction random walk agent will take}
-    \label{tab:probdirs}
-\end{table}
-
-\begin{table}[]
-    \centering
-    \begin{tabular}{|l|l|}
-    \hline
-    \textbf{Level size} & \textbf{Generation time} \\ \hline
-    4 x 6 & 6.34 seconds \\ \hline
-    6 x 10 & 6.89 seconds \\ \hline
-    15 x 30 & 7.28 seconds \\ \hline
-    30 x 50 & 9.61 seconds \\ \hline
-    70 x 100 & 13.20 seconds \\ \hline
-    \end{tabular}
-    \caption{A table showing the project's level sizes in tiles and time it takes the procedural algorithms to generate the levels}
-    \label{tab:gentimes}
-    \end{table}
 
 \end{section}
 

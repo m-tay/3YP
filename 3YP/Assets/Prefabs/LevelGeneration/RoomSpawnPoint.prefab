@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7575213526178520850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7575213526178520849}
+  - component: {fileID: 7575213526178520848}
+  - component: {fileID: 7575213526178520942}
+  - component: {fileID: 7575213526178520943}
+  m_Layer: 10
+  m_Name: FillSpawn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7575213526178520849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575213526178520850}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7575213526178520848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575213526178520850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650e9bcb1cbacfc42af10ac3a4ae210b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 8622471576326396364, guid: 19571bf165137254b87c72c2327702aa, type: 3}
+  - {fileID: 8622471576326396364, guid: 16f82260ff6561d41828cbfaecbf0eac, type: 3}
+  - {fileID: 8622471576326396364, guid: 71305b048b43b344b953a646266dc5be, type: 3}
+  - {fileID: 8622471576326396364, guid: 352e45bebb223ab4b9dd0eb325ca883d, type: 3}
+  interiors:
+  - {fileID: 8622471576326396364, guid: 4d9aac349dcff0b48a1ffee39f400b58, type: 3}
+  - {fileID: 8622471576326396364, guid: 58af15c8395c43b45a8e6d9c201f1361, type: 3}
+  - {fileID: 8622471576326396364, guid: 113443f7f110bbd4892a9ab3a4cad751, type: 3}
+  doors:
+  - {fileID: 1422674685742278212, guid: 42002bef3cdb0154085c65b6666dd7d3, type: 3}
+  - {fileID: 4606598661204731807, guid: aa918f7ee29b51948b0bf45454f341ee, type: 3}
+  percDoorWillSpawn: 1
+--- !u!114 &7575213526178520942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575213526178520850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce33c0a2bb2a53c4bb3f84762813172d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeRegenAgain: 1
+--- !u!65 &7575213526178520943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575213526178520850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
