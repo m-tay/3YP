@@ -127,6 +127,8 @@ The experiments will be run on different parameters, like level size, to test ho
 \subsubsection{Runtime performance}
 Runtime performance will be evaluated using the Unity Profiler tool. This (by default) provides a detailed snapshot of system resources and performance metrics from a rolling 300ms window of gameplay. For the experiments, the game will be allowed to generate the level and when gameplay begins, a 5 second period of movement will be allowed to elapse before measurements are taken. This is to allow for the performance to stabilise. These experiments will be repeated multiple times, with averages taken, to provide more accurate results.
 
+For FPS measurements, an average will be taken across the 5 second period of gameplay after the level has loaded. For memory usage measurements, the maximum memory usage taken from the Unity Profiler will be used. These will provide representative samples of performance, as all the rooms contain similar amounts of complexity, so performance is not expected to differ at different points of times in the level.
+
 These experiments will be run on several different parameters, comparing:
 
 \begin{compactitem}
@@ -269,8 +271,48 @@ The results of the profiling are shown in Table \ref{tab:genres2}. They are much
 When plotted on a graph, as shown in Figure \ref{fig:genperftable}, the relationship between the number of rooms generated and the generation time can be seen. It was hypothesised that as the number of rooms increases exponentially, because it is based on a grid of $n x n$ dimensions, that the generation time would also increase exponentially. The plotted trendline and the high $R^2$ value demonstrates this. 
 
 \subsection{In-game performance evaluation}
+Experiments were also run to evaluate game performance after the level was generated. It was hypothesised that even though a large level would take a long time to generate, it would have a run-time performance similar to a small level. It was reasoned that this would happen for a few reasons, one being frustrum culling, where objects a certain distance from the camera would never be drawn. Another reason is occlusion culling, which is where objects occluded from the camera's view would not be drawn.
 
+Frustrum culling is an adjustable parameter in Unity (known as ``Clipping Plane''), so this was its effects on gameplay (eg. can the culling be observed?) and performance. Occlusion culling is largely handled by Unity and so will not be part of this experiment.
 
+\subsubsection{Level size and frustrum culling}
+The first experiment evaluated two variables, the level size and frustrum culling. Two metrics were taken to evaluate performance, frames per second and total memory usage. The tests were run on the same level size increments as the generation timing experiments, to provide comparison and also because at the maximum size, a level with 400 levels, the generation time is sufficiently long as to be considered unacceptable from a game point of view. This provides a good measure of an ``extremely large'' level to evaluate performance on.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+    \centering
+    \resizebox{0.7\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{\begin{tabular}[c]{@{}l@{}}Level Size In Tiles\\ (Number of tiles)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Frustum Culling\\ Distance\\ (Unity Units)\end{tabular}} & \textbf{Average FPS} & \textbf{\begin{tabular}[c]{@{}l@{}}Memory usage\\ (GB)\end{tabular}} \\ \hline
+    3x3 (9) & 50 & 58 & 0.33 \\
+    3x3 (9) & 300 & 57 & 0.38 \\
+    5x5 (25) & 50 & 56 & 0.41 \\
+    5x5 (25) & 300 & 56 & 0.42 \\
+    7x7 (49) & 50 & 54 & 0.46 \\
+    7x7 (49) & 300 & 52 & 0.46 \\
+    9x9 (81) & 50 & 50 & 0.49 \\
+    9x9 (81) & 300 & 50 & 0.53 \\
+    10x10 (100) & 50 & 47 & 0.59 \\
+    10x10 (100) & 300 & 46 & 0.62 \\
+    12x12 (144) & 50 & 46 & 0.71 \\
+    12x12 (144) & 300 & 46 & 0.71 \\
+    15x15 (225) & 50 & 46 & 1.05 \\
+    15x15 (225) & 300 & 42 & 1.13 \\
+    20x20 (400) & 50 & 50 & 1.37 \\
+    20x20 (400) & 300 & 42 & 1.75 \\ \hline
+    \end{tabular}%
+    }
+    \caption{Timing results from runtime performance tests varying the level size and frustrum culling}
+    \label{tab:genres3}
+    \end{table}
+
+The results of the tests are shown in Table \ref{tab:genres3}. The results demonstrate that even though large levels take an unreasonable amount of time to generate, the performance of them is not unduly affected by their size. A 400 room level took on average 86.2 seconds to generate, but average performance of 42 to 50 frames per second is within an acceptable range. As \cite{Davis2015} found, most people perceive smooth motion at frame rates of 50 Hz and above.
+
+This means that for the reduced frustrum culling distance of 50, even unreasonably large to generate levels still have a high quality realtime performance. Indeed, even when performance drops to 42 FPS, it still feels smooth in motion, although this is a subjective effect.
+
+The results also show that reducing the frustrum culling length makes a significant impact on performance on the most demanding case - with an improvement of 16\% for 400 tile levels. Using a reduced frustrum culling length works well for this implementation, because of the nature of a closed maze, it is not possible for the user to see very far anyway, so the player never notices the culling happening. 
 
 \end{section}
 

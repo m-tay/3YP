@@ -1,12 +1,12 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Unity Profiler showing execution time of LevelGenerator script\relax }}{15}{figure.caption.7}% 
-\contentsline {figure}{\numberline {3}{\ignorespaces Gantt chart of original plan\relax }}{17}{figure.caption.11}% 
-\contentsline {figure}{\numberline {4}{\ignorespaces Gantt chart of updated plan\relax }}{18}{figure.caption.12}% 
-\contentsline {figure}{\numberline {5}{\ignorespaces A top-down view of the guaranteed path generation, showing how the PCG algorithm moves in three directions to create a route through a maze\relax }}{19}{figure.caption.13}% 
-\contentsline {figure}{\numberline {6}{\ignorespaces A top-down view of the guaranteed path with remaining tiles filled in, demonstrating how the filling algorithm works\relax }}{19}{figure.caption.14}% 
-\contentsline {figure}{\numberline {7}{\ignorespaces A top-down of the difference in default and optimised viewing frustrum sizes, with Unity's default frustrum size on the left and the optimised size for the generated mazes on the right\relax }}{20}{figure.caption.15}% 
-\contentsline {figure}{\numberline {8}{\ignorespaces Initial UML diagram\relax }}{21}{figure.caption.16}% 
-\contentsline {figure}{\numberline {9}{\ignorespaces Redesigned UML diagram\relax }}{22}{figure.caption.17}% 
-\contentsline {figure}{\numberline {10}{\ignorespaces A screenshot of a room tile, showing the walls and exits of a tile (with the ceiling hidden)\relax }}{23}{figure.caption.18}% 
-\contentsline {figure}{\numberline {11}{\ignorespaces A screenshot of a room interior, designed to fit into any tile with any exit\relax }}{23}{figure.caption.19}% 
-\contentsline {figure}{\numberline {12}{\ignorespaces A screenshot of a procedurally generated room, with the tile and interior composited in a real-time environment\relax }}{24}{figure.caption.20}% 
-\contentsline {figure}{\numberline {2}{\ignorespaces Results of profiled generation performance\relax }}{27}{figure.caption.9}% 
+\contentsline {figure}{\numberline {2}{\ignorespaces Results of profiled generation performance\relax }}{16}{figure.caption.9}% 
+\contentsline {figure}{\numberline {3}{\ignorespaces Gantt chart of original plan\relax }}{20}{figure.caption.12}% 
+\contentsline {figure}{\numberline {4}{\ignorespaces Gantt chart of updated plan\relax }}{21}{figure.caption.13}% 
+\contentsline {figure}{\numberline {5}{\ignorespaces A top-down view of the guaranteed path generation, showing how the PCG algorithm moves in three directions to create a route through a maze\relax }}{22}{figure.caption.14}% 
+\contentsline {figure}{\numberline {6}{\ignorespaces A top-down view of the guaranteed path with remaining tiles filled in, demonstrating how the filling algorithm works\relax }}{22}{figure.caption.15}% 
+\contentsline {figure}{\numberline {7}{\ignorespaces A top-down of the difference in default and optimised viewing frustrum sizes, with Unity's default frustrum size on the left and the optimised size for the generated mazes on the right\relax }}{23}{figure.caption.16}% 
+\contentsline {figure}{\numberline {8}{\ignorespaces Initial UML diagram\relax }}{24}{figure.caption.17}% 
+\contentsline {figure}{\numberline {9}{\ignorespaces Redesigned UML diagram\relax }}{25}{figure.caption.18}% 
+\contentsline {figure}{\numberline {10}{\ignorespaces A screenshot of a room tile, showing the walls and exits of a tile (with the ceiling hidden)\relax }}{26}{figure.caption.19}% 
+\contentsline {figure}{\numberline {11}{\ignorespaces A screenshot of a room interior, designed to fit into any tile with any exit\relax }}{26}{figure.caption.20}% 
+\contentsline {figure}{\numberline {12}{\ignorespaces A screenshot of a procedurally generated room, with the tile and interior composited in a real-time environment\relax }}{27}{figure.caption.21}% 

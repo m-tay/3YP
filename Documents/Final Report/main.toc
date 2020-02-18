@@ -18,15 +18,16 @@
 \contentsline {subsubsection}{\numberline {2.7.1}Generation time performance}{11}{subsubsection.2.7.1}% 
 \contentsline {subsubsection}{\numberline {2.7.2}Runtime performance}{11}{subsubsection.2.7.2}% 
 \contentsline {subsubsection}{\numberline {2.7.3}Reference hardware}{12}{subsubsection.2.7.3}% 
-\contentsline {section}{\numberline {3}Implementation}{12}{section.3}% 
+\contentsline {section}{\numberline {3}Implementation}{13}{section.3}% 
 \contentsline {section}{\numberline {4}Evaluation}{13}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}Quality of levels}{13}{subsection.4.1}% 
 \contentsline {subsection}{\numberline {4.2}Level generation performance}{13}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Generation code execution testing}{13}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Generation code execution testing}{14}{subsubsection.4.2.1}% 
 \contentsline {subsubsection}{\numberline {4.2.2}Profiling the generation code}{14}{subsubsection.4.2.2}% 
 \contentsline {subsection}{\numberline {4.3}In-game performance evaluation}{16}{subsection.4.3}% 
-\contentsline {section}{References}{16}{section*.10}% 
-\contentsline {section}{\numberline {A}Gantt charts}{17}{appendix.A}% 
-\contentsline {section}{\numberline {B}Diagrams}{19}{appendix.B}% 
-\contentsline {section}{\numberline {C}Screenshots}{23}{appendix.C}% 
-\contentsline {section}{\numberline {D}Tables}{25}{appendix.D}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Level size and frustrum culling}{17}{subsubsection.4.3.1}% 
+\contentsline {section}{References}{19}{section*.11}% 
+\contentsline {section}{\numberline {A}Gantt charts}{20}{appendix.A}% 
+\contentsline {section}{\numberline {B}Diagrams}{22}{appendix.B}% 
+\contentsline {section}{\numberline {C}Screenshots}{26}{appendix.C}% 
+\contentsline {section}{\numberline {D}Tables}{28}{appendix.D}% 

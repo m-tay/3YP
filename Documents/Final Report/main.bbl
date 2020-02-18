@@ -4,6 +4,11 @@
 Brown, M. (2016).
 \newblock How (and why) spelunky makes its own levels | game maker's toolkit.
 
+\bibitem[Davis et~al., 2015]{Davis2015}
+Davis, J., Hsieh, Y.-H., and Lee, H.-C. (2015).
+\newblock Humans perceive flicker artifacts at 500{\hspace{0.25em}}hz.
+\newblock {\em Scientific Reports}, 5(1).
+
 \bibitem[Dormans, 2010]{Dormans:2010:ALD:1814256.1814257}
 Dormans, J. (2010).
 \newblock Adventures in level design: Generating missions and spaces for action

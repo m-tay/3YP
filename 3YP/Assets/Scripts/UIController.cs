@@ -21,6 +21,10 @@ public class UIController : MonoBehaviour
 	float angleToExit;
 
 	float deltaTime = 0.0f;
+	
+	// average fps calculator
+	float fpsAvg = 0.0f;
+	int qty = 0;
  
 	void Start() {
 		torch = GameObject.Find("PlayerTorch").GetComponent<Light>();
@@ -86,6 +90,18 @@ public class UIController : MonoBehaviour
 		style.normal.textColor = new Color (1.0f, 0.92f, 0.016f, 1.0f);
 		text = string.Format("Torch intensity: {0}", newIntensity);
 		GUI.Label(rect, text, style);
+
+		// average fps display
+		++qty;
+		fpsAvg += (fps - fpsAvg)/qty;
+		float displayValue = (1F/fpsAvg);
+		rect = new Rect(0, 45, w, h * 2 / 75);
+		style.alignment = TextAnchor.UpperLeft;
+		style.fontSize = h * 2 / 100;
+		style.normal.textColor = new Color (1.0f, 0.92f, 0.016f, 1.0f);
+		text = string.Format("Average FPS: {0})", fpsAvg);
+		GUI.Label(rect, text, style);
+
 
 
 	}
